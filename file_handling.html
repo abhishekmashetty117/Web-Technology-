@@ -1,0 +1,916 @@
+<!Doctype html>
+
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Affordable and profession web desginer">
+		<meta name="Keywords" content="web design,affordable web design">
+		<meta name="author" content="Abhishek Mashetty">
+		<title>Python Programming | About</title>
+		<link rel="stylesheet" type="text/css" href="how.css"/>
+		<link rel="icon" href="AM.png">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+		<script>
+			//paste this code under head tag or in a seperate js file.
+			// Wait for window load
+			$(window).load(function() {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+			});
+		</script>
+  </head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">Python Programming</span> </h1>
+				</div>
+				<nav>
+					<ul>
+					<li ><a href="index.html">Home</a></li>
+					<li class="current"><a href="tutorial.html">Tutorials</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="projects.html#about">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+    <br><br>
+<div class="container">
+	<a name="Introduction"><font size=13 face="ariel">Introduction</font></a>
+	<pre>
+File is a named location on disk to store related information. It is used to permanently
+store data in a non-volatile memory (e.g. hard disk).
+
+Since, random access memory (RAM) is volatile which loses its data when computer is turned off,
+we use files for future use of the data.
+
+When we want to read from or write to a file we need to open it first. When we are done,
+it needs to be closed, so that resources that are tied with the file are freed.
+
+Hence, in Python, a file operation takes place in the following order.
+
+1. Open a file
+2. Read or write (perform operation)
+3. Close the file</pre>
+	<a name="fileOperation"><font size=13 face="ariel">File Operations</font><br><br></a>
+<table cellpadding="2" cellspacing="5" border="3">
+<th>Modes</th>
+<th>Description</th>
+<tr>
+<td align="center">r</td>
+<td align="center"><pre>Opens a file for reading only. The file pointer is placed at the beginning of
+the file. This is the default mode.</pre></td></tr>
+<tr>
+<td align="center">rb</td>
+<td align="center"><pre>Opens a file for reading only in binary format. The file pointer is placed
+at the beginning of the file. This is the default mode.</pre></td></tr>
+<tr>
+<td align="center">r+</td>
+<td align="center"><pre>Opens a file for both reading and writing. The file pointer placed at the
+beginning of the file.</pre></td></tr>
+<tr>
+<td align="center">rb+</td>
+<td align="center"><pre>Opens a file for both reading and writing in binary format. The file pointer
+placed at the beginning of the file.</pre>
+</td></tr>
+<tr>
+<td align="center">w</td>
+<td align="center"><pre>Opens a file for writing only. Overwrites the file if the file exists. If
+the file does not exist, creates a new file for writing.</pre></td></tr>
+<tr>
+<td align="center">wb</td>
+<td align="center"><pre>Opens a file for writing only in binary format. Overwrites the file if the
+file exists. If the file does not exist, creates a new file for writing.</pre></td></tr>
+<tr>
+<td align="center">w+</td>
+<td align="center"><pre>Opens a file for both writing and reading. Overwrites the existing file if
+the file exists. If the file does not exist, creates a new file for reading and writing.</pre></td></tr>
+<tr>
+<td align="center">wb+</td>
+<td align="center"><pre>Opens a file for both writing and reading in binary format.
+Overwrites the existing file if the file exists. If the file does not exist,
+creates a new file for reading and writing.</pre></td></tr>
+<tr>
+<td align="center">a</td>
+<td align="center"><pre>Opens a file for appending. The file pointer is at the end of the file if
+the file exists. That is, the file is in the append mode. If the file does not
+exist, it creates a new file for writing.</pre></td></tr>
+<tr>
+<td align="center">ab</td>
+<td align="center"><pre>Opens a file for appending in binary format. The file pointer is at the end
+of the file if the file exists. That is, the file is in the append mode. If the
+file does not exist, it creates a new file for writing.</pre></td></tr>
+<tr>
+<td align="center">a+</td>
+<td align="center"><pre>Opens a file for both appending and reading. The file pointer is at the end
+of the file if the file exists. The file opens in the append mode. If the file
+does not exist, it creates a new file for reading and writing.</pre></td></tr>
+<tr>
+<td align="center">ab+</td>
+<td align="center"><pre>Opens a file for both appending and reading in binary format. The file pointer
+is at the end of the file if the file exists. The file opens in the append mode.
+If the file does not exist, it creates a new file for reading and writing.</pre></td></tr>
+</table>
+<br><br><br>
+<font size=8 face="Ariel">The file object attribute</font>
+<table cellpadding="5" cellspacing="5" border="3">
+<th>Attribute</th>
+<th>Description</th>
+<tr>
+<td align="center">file.closed</td>
+<td align="center">Returns true if file is closed, false otherwise.</td></tr>
+<tr>
+  <td align="center">file.mode</td>
+  <td align="center">Returns access mode with which file was opened.</td></tr>
+<tr>
+  <td align="center">file.name</td>
+  <td align="center">Returns name of the file.</td></tr>
+<tr>
+  <td align="center">file.softspace</td>
+  <td align="center">Returns false if space explicitly required with print, true otherwise.
+</td></tr></table>
+<br>
+<pre># Open a file
+fo = open("foo.txt", "wb")
+print "Name of the file: ", fo.name
+print "Closed or not : ", fo.closed
+print "Opening mode : ", fo.mode
+print "Softspace flag : ", fo.softspace
+
+this produces the following result
+Name of the file:  foo.txt
+Closed or not :  False
+Opening mode :  wb
+Softspace flag :  0
+</pre><br>
+<font size=8 face="Ariel">The close() method</font>
+<pre>The close() method of a file object flushes any unwritten information and
+closes the file object, after which no more writing can be done.
+Python automatically closes a file when the reference object of a file is reassigned
+to another file. It is a good practice to use the close() method to close a file.
+
+Syntax:fileObject.close();
+
+# Open a file
+fo = open("foo.txt", "wb")
+print "Name of the file: ", fo.name
+
+# Close opend file
+fo.close()
+
+This produces the following result −
+
+Name of the file:  foo.txt
+</pre>
+<br>
+<font size=8 face="Ariel">Reading and Writing Files</font>
+<pre>The file object provides a set of access methods to make our lives easier.
+We would see how to use read() and write() methods to read and write files.
+</pre>
+<br>
+<font size=8 face="Ariel">The write() Method</font>
+<pre>The write() method writes any string to an open file. It is important to
+note that Python strings can have binary data and not just text.
+
+The write() method does not add a newline character ('\n') to the end of the string −
+Syntax:fileObject.write(string);
+
+# Open a file
+fo = open("foo.txt", "wb")
+fo.write( "Python is a great language.\nYeah its great!!\n");
+
+# Close opened file
+fo.close()
+
+If you would open this file, it would have following content.
+
+Python is a great language.
+Yeah its great!!
+</pre>
+<br>
+<font size=8 face="Ariel">The read() Method</font>
+<pre>The read() method reads a string from an open file. It is important to note
+that Python strings can have binary data. apart from text data.
+
+Syntax:fileObject.read([count]);
+
+Here, passed parameter is the number of bytes to be read from the opened file.
+This method starts reading from the beginning of the file and if count is missing,
+then it tries to read as much as possible, maybe until the end of file.
+
+# Open a file
+fo = open("foo.txt", "r+")
+str = fo.read(10);
+print "Read String is : ", str
+# Close opend file
+fo.close()
+
+This produces the following result −
+
+Read String is :  Python is
+</pre>
+<br>
+<font size=8 face="Ariel">File Positions</font>
+<pre>The tell() method tells you the current position within the file; in other
+words, the next read or write will occur at that many bytes from the beginning of the file.
+
+The seek(offset[, from]) method changes the current file position. The offset
+argument indicates the number of bytes to be moved. The from argument specifies
+the reference position from where the bytes are to be moved.
+
+If from is set to 0, it means use the beginning of the file as the reference
+position and 1 means use the current position as the reference position and if
+it is set to 2 then the end of the file would be taken as the reference position.
+
+# Open a file
+fo = open("foo.txt", "r+")
+str = fo.read(10);
+print "Read String is : ", str
+
+# Check current position
+position = fo.tell();
+print "Current file position : ", position
+
+# Reposition pointer at the beginning once again
+position = fo.seek(0, 0);
+str = fo.read(10);
+print "Again read String is : ", str
+# Close opend file
+fo.close()
+This produces the following result −
+
+Read String is :  Python is
+Current file position :  10
+Again read String is :  Python is
+</pre>
+<br>
+<font size=8 face="Ariel">Renaming and Deleting Files</font>
+<pre>Python os module provides methods that help you perform file-processing operations,
+such as renaming and deleting files.
+To use this module you need to import it first and then you can call any related functions.
+</pre>
+<br>
+<font size=8 face="Ariel">The rename() Method</font>
+<pre>The rename() method takes two arguments, the current filename and the new filename.
+Syntax:os.rename(current_file_name, new_file_name)
+
+import os
+
+# Rename a file from test1.txt to test2.txt
+os.rename( "test1.txt", "test2.txt" )
+</pre>
+<br>
+<font size=8 face="Ariel">The remove() method</font>
+<pre>You can use the remove() method to delete files by supplying the name of the file to be deleted as the argument.
+
+Syntax:os.remove(file_name)
+
+import os
+
+# Delete file test2.txt
+os.remove("text2.txt")
+</pre>
+<font size=8 face="Ariel">The remove() method</font>
+<pre>You can use the remove() method to delete files by supplying the name of
+the file to be deleted as the argument.
+Syntax:os.remove(file_name)
+
+Following is the example to delete an existing file test2.txt −
+import os
+
+# Delete file test2.txt
+os.remove("text2.txt")
+</pre>
+<font size=8 face="Ariel">Directories in Python</font>
+<pre>All files are contained within various directories, and Python has no problem
+handling these too. The os module has several methods that help you create, remove,
+and change directories.</pre>
+<font size=8 face="Ariel">The <i>mkdir()</i> Method</font>
+<pre>You can use the mkdir() method of the os module to create directories in the
+current directory. You need to supply an argument to this method which contains
+the name of the directory to be created.
+
+Syntax:os.mkdir("newdir")
+Following is the example to create a directory test in the current directory −
+
+import os
+
+# Create a directory "test"
+os.mkdir("test")
+</pre>
+<br>
+<font size=8 face="Ariel">The <i>chdir()</i> Method</font>
+<pre>You can use the chdir() method to change the current directory. The chdir()
+method takes an argument, which is the name of the directory that you want to make
+the current directory.
+
+Syntax:os.chdir("newdir")
+</pre><br>
+<font size=8 face="Ariel">The <i>getcwd()</i> Method</font>
+<pre>
+The getcwd() method displays the current working directory.
+
+Syntax
+os.getcwd()
+
+import os
+
+# This would give location of the current directory
+os.getcwd()
+</pre><br>
+<font size=8 face="Ariel">The <i>rmdir()</i> Method</font>
+<pre>The rmdir() method deletes the directory, which is passed as an argument in
+the method.
+
+Before removing a directory, all the contents in it should be removed.
+
+Syntax:os.rmdir('dirname')
+
+Following is the example to remove "/tmp/test" directory. It is required to give
+fully qualified name of the directory, otherwise it would search for that directory
+in the current directory.
+
+import os
+
+# This would  remove "/tmp/test"  directory.
+os.rmdir( "/tmp/test"  )
+</pre>
+
+<a name="stringProcessing"><font size=13 face='ariel'>String Processing</font></a>
+<br><br>
+<font size=8 face='ariel'>-> Manipulating Python Strings</font>
+<pre>If you have been exposed to another programming language before, you might
+have learned that you need to declare or type variables before you can store anything
+in them. This is not necessary when working with strings in Python. We can create a string
+simply by putting content wrapped with quotation marks into it with an equal sign (=):
+
+message = "Hello World"</pre>
+<font size=8 face='ariel'>-> String Operators: Adding and Multiplying</font>
+<pre>A string is a type of object, one that consists of a series of characters.
+Python already knows how to deal with a number of general-purpose and powerful representations,
+including strings. One way to manipulate strings is by using string operators. These operators are
+represented by symbols that you likely associate with mathematics, such as +, -, *, /, and =. When
+used with strings, they perform actions that are similar to, but not the same as, their mathematical
+counterparts.
+</pre>
+<font size=6 face='ariel'>(i).Concatenate</font>
+<pre>This term means to join strings together. The process is known as concatenating
+strings and it is done using the plus (+) operator. Note that you must be explicit
+about where you want blank spaces to occur by placing them between single quotation
+marks also.
+
+In this example, the string “message1” is given the content “hello world”.
+
+message1 = 'hello' + ' ' + 'world'
+print(message1)
+-> hello world
+</pre>
+<br>
+<font size=6 face='ariel'>(ii).Multiply</font>
+<pre>If you want multiple copies of a string, use the multiplication (*) operator.
+In this example, string message2a is given the content “hello” times three;
+string message 2b is given content “world”; then we print both strings.
+
+message2a = 'hello ' * 3
+message2b = 'world'
+print(message2a + message2b)
+-> hello hello hello world</pre>
+<br>
+<font size=6 face='ariel'>(iii).Append</font>
+<pre>What if you want to add material to the end of a string successively? There
+is a special operator for that (+=).
+
+message3 = 'howdy'
+message3 += ' '
+message3 += 'world'
+print(message3)
+-> howdy world</pre>
+<br>
+<font size=8 face='ariel'>-> String Methods: Finding, Changing</font>
+<p>In addition to operators, Python comes pre-installed with dozens of string methods<br>
+that allow you to do things to strings. Used alone or in combination, these methods can<br>
+do just about anything you can imagine to strings. The good news is that you can reference a<br>
+list of String Methods on the <a href="https://docs.python.org/2/library/stdtypes.html#string-methods">Python website</a>,<br>
+including information on how to use each properly.<br>
+To make sure that you’ve got a basic grasp of string methods, what follows is a brief overview of some<br>
+of the more commonly used ones:
+</p>
+<br>
+<font size=6 face='ariel'>(i).Length</font>
+<pre>You can determine the number of characters in a string using len. Note that
+the blank space counts as a separate character.
+message4 = 'hello' + ' ' + 'world'
+print(len(message4))
+-> 11</pre>
+<br>
+<font size=6 face='ariel'>(ii).Find</font>
+<pre>You can search a string for a substring and your program will return the starting
+index position of that substring. This is helpful for further processing. Note that indexes
+are numbered from left to right and that the count starts with position 0, not 1.
+
+message5 = "hello world"
+message5a = message5.find("worl")
+print(message5a)
+-> 6
+If the substring is not present, the program will return a value of -1.
+
+message6 = "Hello World"
+message6b = message6.find("squirrel")
+print(message6b)
+-> -1
+</pre>
+<br>
+<font size=6 face='ariel'>(iii).Lower Case</font>
+<pre>Sometimes it is useful to convert a string to lower case. For example, if we
+standardize case it makes it easier for the computer to recognize that “Sometimes”
+and “sometimes” are the same word.
+
+message7 = "HELLO WORLD"
+message7a = message7.lower()
+print(message7a)
+-> hello world
+The opposite effect, raising characters to upper case, can be achieved by changing .lower() to .upper().
+</pre>
+<br>
+<font size=6 face='ariel'>(iv).Replace</font>
+<pre>If you need to replace a substring throughout a string you can do so with the replace method.
+
+message8 = "HELLO WORLD"
+message8a = message8.replace("L", "pizza")
+print(message8a)
+-> HEpizzapizzaO WORpizzaD
+</pre>
+<br>
+<font size=6 face='ariel'>(v).Slice</font>
+<pre>If you want to slice off unwanted parts of a string from the beginning or end
+you can do so by creating a substring. The same kind of technique also allows you to
+break a long string into more manageable components.
+
+message9 = "Hello World"
+message9a = message9[1:8]
+print(message9a)
+-> ello Wo
+You can substitute variables for the integers used in this example.
+
+startLoc = 2
+endLoc = 8
+message9b = message9[startLoc: endLoc]
+print(message9b)
+-> llo Wo
+This makes it much easier to use this method in conjunction with the find method
+as in the next example, which checks for the letter “d” in the first six characters
+of “Hello World” and correctly tells us it is not there (-1). This technique is much
+more useful in longer strings – entire documents for example. Note that the absence of
+an integer before the colon signifies we want to start at the beginning of the string.
+We could use the same technique to tell the program to go all the way to the end by putting
+no integer after the colon. And remember, index positions start counting from 0 rather than 1.
+
+message9 = "Hello World"
+print(message9[:5].find("d"))
+-> -1
+There are lots more, but the string methods above are a good start. Note that in
+this last example, we are using square brackets instead of parentheses. This difference
+in syntax signals an important distinction. In Python, parentheses are usually used
+to pass an argument to a function. So when we see something like
+
+print(len(message7))
+it means pass the string message7 to the function len then send the returned
+value of that function to the print statement to be printed. If a function can
+be called without an argument, you often have to include a pair of empty parentheses
+after the function name anyway. We saw an example of that, too:
+
+message7 = "HELLO WORLD"
+message7a = message7.lower()
+print(message7a)
+-> hello world
+This statement tells Python to apply the lower function to the string message7
+and store the returned value in the string message7a.
+
+The square brackets serve a different purpose. If you think of a string as a sequence
+of characters, and you want to be able to access the contents of the string by their
+location within the sequence, then you need some way of giving Python a location within a sequence.
+That is what the square brackets do: indicate a beginning and ending location within a sequence
+as we saw when using the slice method.
+</pre>
+<br>
+<font size=6 face='ariel'>(vi).Escape Sequences</font>
+<pre>
+What do you do when you need to include quotation marks within a string? You don’t
+want the Python interpreter to get the wrong idea and end the string when it comes
+across one of these characters. In Python, you can put a backslash (\) in front of a
+quotation mark so that it doesn’t terminate the string. These are known as escape sequences.
+
+print('\"')
+-> "
+print('The program printed \"hello world\"')
+-> The program printed "hello world"
+Two other escape sequences allow you to print tabs and newlines:
+
+print('hello\thello\thello\nworld')
+->hello hello hello
+world</pre>
+<a name="Exception"><font size = "13" face = "ariel">Exception</font></a>
+<table cellspacing = "5" cellpadding = "2" border = "2">
+<tbody><tr>
+<th><b>EXCEPTION NAME</b></th>
+<th><b>DESCRIPTION</b></th>
+</tr>
+<tr>
+<td>Exception</td>
+<td>Base class for all exceptions</td>
+</tr>
+<tr>
+<td>StopIteration</td>
+<td>Raised when the next() method of an iterator does not point to any object.</td>
+</tr>
+<tr>
+<td>SystemExit</td>
+<td>Raised by the sys.exit() function.</td>
+</tr>
+<tr>
+<td>StandardError</td>
+<td>Base class for all built-in exceptions except StopIteration and SystemExit.</td>
+</tr>
+<tr>
+<td>ArithmeticError</td>
+<td>Base class for all errors that occur for numeric calculation.</td>
+</tr>
+<tr>
+<td>OverflowError</td>
+<td>Raised when a calculation exceeds maximum limit for a numeric type.</td>
+</tr>
+<tr>
+<td>FloatingPointError</td>
+<td>Raised when a floating point calculation fails.</td>
+</tr>
+<tr>
+<td>ZeroDivisionError</td>
+<td>Raised when division or modulo by zero takes place for all numeric types.</td>
+</tr>
+<tr>
+<td>AssertionError</td>
+<td>Raised in case of failure of the Assert statement.</td>
+</tr>
+<tr>
+<td>AttributeError</td>
+<td>Raised in case of failure of attribute reference or assignment.</td>
+</tr>
+<tr>
+<td>EOFError</td>
+<td>Raised when there is no input from either the raw_input() or input() function and the end of file is reached.</td>
+</tr>
+<tr>
+<td>ImportError</td>
+<td>Raised when an import statement fails.</td>
+</tr>
+<tr>
+<td>KeyboardInterrupt</td>
+<td>Raised when the user interrupts program execution, usually by pressing Ctrl+c.</td>
+</tr>
+<tr>
+<td>LookupError</td>
+<td>Base class for all lookup errors.</td>
+</tr>
+<tr>
+<td><p>IndexError</p><p>KeyError</p></td>
+<td><p>Raised when an index is not found in a sequence.</p><p>Raised when the specified key is not found in the dictionary.</p></td>
+</tr>
+<tr>
+<td>NameError</td>
+<td>Raised when an identifier is not found in the local or global namespace.</td>
+</tr>
+<tr>
+<td><p>UnboundLocalError</p><p>EnvironmentError</p></td>
+<td><p>Raised when trying to access a local variable in a function or method but no value has been assigned to it.</p><p>Base class for all exceptions that occur outside the Python environment.</p></td>
+</tr>
+<tr>
+<td><p>IOError</p><p>IOError</p></td>
+<td><p>Raised when an input/ output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.</p><p>Raised for operating system-related errors.</p></td>
+</tr>
+<tr>
+<td><p>SyntaxError</p><p>IndentationError</p></td>
+<td><p>Raised when there is an error in Python syntax.</p><p>Raised when indentation is not specified properly.</p></td>
+</tr>
+<tr>
+<td>SystemError</td>
+<td>Raised when the interpreter finds an internal problem, but when this error is encountered the Python interpreter does not exit.</td>
+</tr>
+<tr>
+<td>SystemExit</td>
+<td>Raised when Python interpreter is quit by using the sys.exit() function. If not handled in the code, causes the interpreter to exit.</td>
+</tr>
+<tr>
+<td>TypeError</td>
+<td>Raised when an operation or function is attempted that is invalid for the specified data type.</td>
+</tr>
+<tr>
+<td>ValueError</td>
+<td>Raised when the built-in function for a data type has the valid type of arguments, but the arguments have invalid values specified.</td>
+</tr>
+<tr>
+<td>RuntimeError</td>
+<td>Raised when a generated error does not fall into any category.</td>
+</tr>
+<tr>
+<td>NotImplementedError</td>
+<td>Raised when an abstract method that needs to be implemented in an inherited class is not actually implemented.</td>
+</tr>
+</tbody></table>
+<br>
+<font size="13" face="ariel">Assertions in Python</font>
+<pre>The easiest way to think of an assertion is to liken it to a raise-if statement
+(or to be more accurate, a raise-if-not statement). An expression is tested, and if the result comes up false,
+an exception is raised.
+
+An assertion is a sanity-check that you can turn on or turn off when you are done with your testing of the program.
+
+Assertions are carried out by the assert statement, the newest keyword to Python, introduced in version 1.5.
+
+Programmers often place assertions at the start of a function to check for valid input, and after a
+function call to check for valid output.
+</pre>
+<br>
+<font size="8" face="ariel">The <i>assert</i> statement</font>
+<pre>
+When it encounters an assert statement, Python evaluates the accompanying expression,
+which is hopefully true. If the expression is false, Python raises an AssertionError exception.
+
+The syntax for assert is −
+
+assert Expression[, Arguments]
+If the assertion fails, Python uses ArgumentExpression as the argument for the AssertionError.
+AssertionError exceptions can be caught and handled like any other exception using the try-except statement,
+but if not handled, they will terminate the program and produce a traceback.
+
+Example
+Here is a function that converts a temperature from degrees Kelvin to degrees Fahrenheit.
+Since zero degrees Kelvin is as cold as it gets, the function bails out if it sees a negative temperature −
+
+#!/usr/bin/python
+def KelvinToFahrenheit(Temperature):
+   assert (Temperature >= 0),"Colder than absolute zero!"
+   return ((Temperature-273)*1.8)+32
+print KelvinToFahrenheit(273)
+print int(KelvinToFahrenheit(505.78))
+print KelvinToFahrenheit(-5)
+When the above code is executed, it produces the following result −
+
+32.0
+451
+Traceback (most recent call last):
+File "test.py", line 9, in
+print KelvinToFahrenheit(-5)
+File "test.py", line 4, in KelvinToFahrenheit
+assert (Temperature >= 0),"Colder than absolute zero!"
+AssertionError: Colder than absolute zero!</pre>
+<br>
+<font size="8" face="ariel">What is Exception</font>
+<pre>An exception is an event, which occurs during the execution of a program that disrupts
+the normal flow of the program's instructions. In general, when a Python script encounters a
+situation that it cannot cope with, it raises an exception. An exception is a Python object that represents an error.
+
+When a Python script raises an exception, it must either handle the exception immediately otherwise it terminates
+and quits.</pre>
+<br>
+<font size="8" face="ariel"> Handling an exception </font>
+<pre>
+	If you have some suspicious code that may raise an exception, you can defend your program
+	by placing the suspicious code in a try: block. After the try: block, include an except: statement,
+	followed by a block of code which handles the problem as elegantly as possible.
+
+	Syntax
+	Here is simple syntax of try....except...else blocks −
+
+	try:
+	   You do your operations here;
+	   ......................
+	except ExceptionI:
+	   If there is ExceptionI, then execute this block.
+	except ExceptionII:
+	   If there is ExceptionII, then execute this block.
+	   ......................
+	else:
+	   If there is no exception then execute this block.
+	Here are few important points about the above-mentioned syntax −
+
+	A single try statement can have multiple except statements. This is useful when the try
+	block contains statements that may throw different types of exceptions.
+
+	You can also provide a generic except clause, which handles any exception.
+
+	After the except clause(s), you can include an else-clause. The code in the else-block executes
+	if the code in the try: block does not raise an exception.
+
+	The else-block is a good place for code that does not need the try: block's protection.
+
+	Example
+	This example opens a file, writes content in the, file and comes out gracefully because there is no problem at all −
+
+	#!/usr/bin/python
+
+	try:
+	   fh = open("testfile", "w")
+	   fh.write("This is my test file for exception handling!!")
+	except IOError:
+	   print "Error: can\'t find file or read data"
+	else:
+	   print "Written content in the file successfully"
+	   fh.close()
+	This produces the following result −
+
+	Written content in the file successfully
+	Example
+	This example tries to open a file where you do not have write permission, so it raises an exception −
+
+	#!/usr/bin/python
+
+	try:
+	   fh = open("testfile", "r")
+	   fh.write("This is my test file for exception handling!!")
+	except IOError:
+	   print "Error: can\'t find file or read data"
+	else:
+	   print "Written content in the file successfully"
+	This produces the following result −
+
+	Error: can't find file or read data</pre>
+	<br>
+	<font size="8" face="ariel">The <i>except</i> Clause with No Exceptions</font>
+	<pre>
+		You can also use the except statement with no exceptions defined as follows −
+
+try:
+   You do your operations here;
+   ......................
+except:
+   If there is any exception, then execute this block.
+   ......................
+else:
+   If there is no exception then execute this block.
+This kind of a try-except statement catches all the exceptions that occur. Using this
+kind of try-except statement is not considered a good programming practice though, because
+it catches all exceptions but does not make the programmer identify the root cause of the problem that may occur.
+</pre>
+<br>
+<font size="8" face="ariel">The <i>except</i> Clause with Multiple Exceptions</font>
+<pre>
+	You can also use the same except statement to handle multiple exceptions as follows −
+
+	try:
+	   You do your operations here;
+	   ......................
+	except(Exception1[, Exception2[,...ExceptionN]]]):
+	   If there is any exception from the given exception list,
+	   then execute this block.
+	   ......................
+	else:
+	   If there is no exception then execute this block.
+</pre>
+<br>
+<font size="8" face="ariel">The <i>try-finally</i></font>
+<pre>
+	You can use a finally: block along with a try: block. The finally block is a place to put any code
+	that must execute, whether the try-block raised an exception or not. The syntax of the try-finally statement is this −
+
+	try:
+	   You do your operations here;
+	   ......................
+	   Due to any exception, this may be skipped.
+	finally:
+	   This would always be executed.
+	   ......................
+	You cannot use else clause as well along with a finally clause.
+
+	Example
+	#!/usr/bin/python
+
+	try:
+	   fh = open("testfile", "w")
+	   fh.write("This is my test file for exception handling!!")
+	finally:
+	   print "Error: can\'t find file or read data"
+	If you do not have permission to open the file in writing mode, then this will produce the following result:
+
+	Error: can't find file or read data
+	Same example can be written more cleanly as follows −
+
+	#!/usr/bin/python
+
+	try:
+	   fh = open("testfile", "w")
+	   try:
+	      fh.write("This is my test file for exception handling!!")
+	   finally:
+	      print "Going to close the file"
+	      fh.close()
+	except IOError:
+	   print "Error: can\'t find file or read data"
+	When an exception is thrown in the try block, the execution immediately passes
+	to the finally block. After all the statements in the finally block are executed, the exception
+	is raised again and is handled in the except statements if present in the next higher layer of the try-except statement.
+</pre>
+<br>
+<font size="8" face="ariel">Argument of an Exception</font>
+<pre>
+	An exception can have an argument, which is a value that gives additional information about the problem.
+	The contents of the argument vary by exception. You capture an exception's argument by supplying a variable
+	in the except clause as follows −
+
+	try:
+	   You do your operations here;
+	   ......................
+	except ExceptionType, Argument:
+	   You can print value of Argument here...
+	If you write the code to handle a single exception, you can have a variable follow the name of the exception
+	in the except statement. If you are trapping multiple exceptions, you can have a variable follow the tuple of
+	the exception.
+
+	This variable receives the value of the exception mostly containing the cause of the exception. The variable can
+	receive a single value or multiple values in the form of a tuple. This tuple usually contains the error string,
+	the error number, and an error location.
+
+	Example
+	Following is an example for a single exception −
+
+	#!/usr/bin/python
+
+	# Define a function here.
+	def temp_convert(var):
+	   try:
+	      return int(var)
+	   except ValueError, Argument:
+	      print "The argument does not contain numbers\n", Argument
+
+	# Call above function here.
+	temp_convert("xyz");
+	This produces the following result −
+
+	The argument does not contain numbers
+	invalid literal for int() with base 10: 'xyz'
+</pre>
+<br>
+<font size="8" face="ariel">Raising an Exceptions</font>
+<pre>
+	You can raise exceptions in several ways by using the raise statement. The general
+	syntax for the raise statement is as follows.
+
+	Syntax
+	raise [Exception [, args [, traceback]]]
+	Here, Exception is the type of exception (for example, NameError) and argument is a
+	value for the exception argument. The argument is optional; if not supplied, the exception argument is None.
+
+	The final argument, traceback, is also optional (and rarely used in practice), and if present,
+	is the traceback object used for the exception.
+
+	Example
+	An exception can be a string, a class or an object. Most of the exceptions that the
+	Python core raises are classes, with an argument that is an instance of the class.
+	Defining new exceptions is quite easy and can be done as follows −
+
+	def functionName( level ):
+	   if level < 1:
+	      raise "Invalid level!", level
+	      # The code below to this would not be executed
+	      # if we raise the exception
+	Note: In order to catch an exception, an "except" clause must refer to the same
+	exception thrown either class object or simple string. For example, to capture above exception,
+	we must write the except clause as follows −
+
+	try:
+	   Business Logic here...
+	except "Invalid level!":
+	   Exception handling here...
+	else:
+	   Rest of the code here...
+</pre>
+<br>
+<font size="8" face="ariel">User-Defined Exception</font>
+<pre>
+	Python also allows you to create your own exceptions by deriving classes from the standard built-in exceptions.
+
+	Here is an example related to RuntimeError. Here, a class is created that is subclassed from RuntimeError.
+	This is useful when you need to display more specific information when an exception is caught.
+
+	In the try block, the user-defined exception is raised and caught in the except block.
+	The variable e is used to create an instance of the class Networkerror.
+
+	class Networkerror(RuntimeError):
+	   def __init__(self, arg):
+	      self.args = arg
+	So once you defined above class, you can raise the exception as follows −
+
+	try:
+	   raise Networkerror("Bad hostname")
+	except Networkerror,e:
+	   print e.args
+</pre>
+
+
+</div>
+</body>
+</html>

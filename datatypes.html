@@ -1,0 +1,935 @@
+<!Doctype html>
+
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Affordable and profession web desginer">
+		<meta name="Keywords" content="web design,affordable web design">
+		<meta name="author" content="Abhishek Mashetty">
+		<title>Python Programming | About</title>
+		<link rel="stylesheet" type="text/css" href="how.css"/>
+		<link rel="icon" href="AM.png">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+		<script>
+			//paste this code under head tag or in a seperate js file.
+			// Wait for window load
+			$(window).load(function() {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+			});
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">Python Programming</span> </h1>
+				</div>
+				<nav>
+					<ul>
+					<li ><a href="index.html">Home</a></li>
+					<li class="current"><a href="tutorial.html">Tutorials</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="projects.html#about">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<br><br><br>
+	<hr>
+			<br>
+			<font size=6 face="Blackletter" color="#4fbcea">
+			<div class="container">Data Types</font><br><br></div>
+			<hr>
+<br><br>
+<br>
+<div class="container">
+<font size=13>Intro</font>
+<pre>
+(i).Tuples - They are just like lists, but you can't change their values. The values
+that you give it first up, are the values that you are stuck with for the rest of
+the program.Again, each value is numbered starting from zero, for easy reference.
+
+(ii).Lists - they are a list of values. Each one of them is numbered, starting from
+zero - the first one is numbered zero, the second 1, the third 2, etc. You can
+remove values from the list, and add new values to the end.
+
+(iii).Dictionaries - are similar to what their name suggests - a dictionary.In a
+dictionary, you have an 'index' of words, and for each of them a definition. In
+python, the word is called a 'key', and the definition a 'value'. The values in
+a dictionary aren't numbered</pre>
+<a name="Tuples"><font size=13 face=Ariel>tuples</font></a>
+<pre>
+Tuples are pretty easy to make. You give your tuple a name, then after that the
+list of values it will carry. For example, the months of the year:
+months = ('January','February','March','April','May','June',\
+'July','August','September','October','November','  December')
+
+in the above tuple
+-> The '\' at the end of the first line carries over that line of code to the next
+   line.
+-> It is very useful way of making big lines more readable.
+</pre>
+<pre>In order to understand how tuple is interpreted by python see the following
+table</pre>
+<br>
+<table cellspacing="2" cellpadding="4" border="2"><!--put increase the width of the table like shown in this link http://sthurlow.com/python/lesson06/-->
+<th>Index</th>
+<th>Value</th>
+<tr>
+	<td>0</td>
+	<td>January</td></tr>
+<tr>
+	<td>1</td>
+	<td>February</td></tr>
+<tr>
+	<td>2</td>
+	<td>March</td></tr>
+<tr>
+	<td>3</td>
+	<td>April</td></tr>
+<tr>
+	<td>4</td>
+	<td>May</td></tr>
+<tr>
+	<td>5</td>
+	<td>June</td></tr>
+<tr>
+	<td>6</td>
+	<td>July</td></tr>
+<tr>
+	<td>7</td>
+	<td>August</td></tr>
+<tr>
+	<td>8</td>
+	<td>September</td></tr>
+<tr>
+	<td>9</td>
+	<td>October</td></tr>
+<tr>
+	<td>10</td>
+	<td>November</td></tr>
+<tr>
+	<td>11</td>
+	<td>December</td></tr>
+</table>
+<br><br>
+<a name="list"><font size="13" face="Ariel">lists</font></a>
+<pre>
+-> Lists are extremely similar to tuples. Lists are modifiable so their values
+can be changed. Most of the time we use lists, not tuples, because we want to
+easily change the values of things if we need to.</pre>
+<pre>
+-> Lists are defined very similarly to tuples. Say you have 5 items, called
+Apple, Ball, Kite, Juice and Cheese. To put them in a list, you would do this:</pre>
+<pre>
+items = ['Apple', 'Ball', 'Kite', 'Juice', 'Cheese']
+</pre>
+<pre>
+-> As you see, the code is exactly the same as a tuple, Except that all the
+values are put between square brackets, not parentheses. Again, you don't have
+to have spaces after the comma.</pre>
+<pre>
+-> You recall values from lists exactly the same as you do with tuples. For
+example, to print the name of your 4th item you would do this:</pre>
+<pre>
+print items[3]
+</pre>
+<pre>
+-> You can also recall a range of examples, like above, for example - items[0:2]
+would recall your 1st and 2nd items.</pre>
+<pre>
+-> Where lists come into their own is how they can be modified. To add a value
+to a list, you use the 'append()' function. Let's say you got a new item called
+Chocolate. To add this to the list you'd do this:</pre>
+<pre>
+items.append('Chocolate')
+</pre>
+<pre>
+-> In order to remove a 3rd item from the list
+del items[2]
+</pre>
+<br>
+<a name="Dictionary"><font size="13" face="Ariel">dictionaries</font></a>
+<pre>
+-> Dictionaries can be better understood with a phonebook example</pre>
+<pre>
+->Usually dictionaries have keys, and values. In a phone book, you have people's
+names and their numbers.</pre>
+<pre>
+->When you initially create a dictionary, it is very much like making a tuple
+ or list. Tuples have ()-parenthesis, lists have []-square brackets.
+->dictionaries have {}-curly braces. Here is an example below, showing a dictionary
+with four phone numbers in it:</pre>
+<pre>
+#Make the phone book:
+phonebook = {'Andy Carrol':90909199, \
+'Sanchez':7177127, 'luis':96582244, \
+'HaHa':12345}
+</pre>
+<pre>
+-> Now you have created a new phone book. Now you want to add new numbers to the
+book. You just add few lines of code:</pre>
+<pre>
+-> To Add an extra person 'Rossi' to the phonebook:
+
+phonebook['Rossi'] = 1234567</pre>
+<pre>
+-> All that line is saying is that there is a person called Rossi in the phone
+book, and his number is 1234567. In other words - the 'key' is 'Rossi',and the
+'value' is '1234567'.</pre>
+<pre>
+-> You delete entries in a dictionary just like in a list.</pre>
+
+<pre>
+del phonebook['Andy Carrol']</pre>
+<br><br>
+<a name="Sets"><font size=13 face="Ariel">Sets</font></a>
+<br>
+<pre>
+-> A set contains an unordered collection of unique and immutable objects.
+The set data type is, as the name implies, a Python implementation of the sets
+as they are known from mathematics. This explains, why sets unlike lists or tuples
+can't have multiple occurrences of the same element. </pre>
+<br>
+<pre>If we want to create a set, we can call the built-in set function with a
+sequence or another iterable object.
+In the following example, a string is singularized into its characters to build
+the resulting set x:
+>>> x = set("A Python Tutorial")
+>>> x
+set(['A', ' ', 'i', 'h', 'l', 'o', 'n', 'P', 'r', 'u', 't', 'a', 'y', 'T'])
+>>> type(x)
+>>> <type 'set'>
+ We can pass a list to the built-in set function, as we can see in the following:
+>>> x = set(["Perl", "Python", "Java"])
+>>> x
+set(['Python', 'Java', 'Perl'])
+We want to show now, what happens, if we pass a tuple with reappearing elements
+to the set function - in our example the city "Paris":
+>>> cities = set(("Paris", "Lyon", "London","Berlin","Paris","Birmingham"))
+>>> cities
+set(['Paris', 'Birmingham', 'Lyon', 'London', 'Berlin'])
+</pre>
+<u><font size=6 face="Ariel">Immutable Sets</font></u>
+<pre>Sets are implemented in a way, which doesn't allow mutable objects. The
+following example demonstrates that we cannot include for example lists as elements:
+>>> cities = set((("Python","Perl"), ("Paris", "Berlin", "London")))
+>>> cities = set((["Python","Perl"], ["Paris", "Berlin", "London"]))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>>
+</pre>
+<u><font size=6 face="Ariel">Frozen Sets</font></u>
+<pre> Though sets can't contain mutable objects, sets are mutable:
+>>> cities = set(["Frankfurt", "Basel","Freiburg"])
+>>> cities.add("Strasbourg")
+>>> cities
+set(['Freiburg', 'Basel', 'Frankfurt', 'Strasbourg'])
+>>>
+
+Frozensets are like sets except that they cannot be changed, i.e. they are immutable:
+>>> cities = frozenset(["Frankfurt", "Basel","Freiburg"])
+>>> cities.add("Strasbourg")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'frozenset' object has no attribute 'add'
+>>> </pre>
+<u><font size=6 face="Ariel">Simplified Notation</font></u>
+<pre>We can define sets (since Python2.6) without using the built-in set function.
+We can use curly braces instead:
+>>> adjectives = {"cheap","expensive","inexpensive","economical"}
+>>> adjectives
+set(['inexpensive', 'cheap', 'expensive', 'economical'])
+>>>
+</pre>
+<u><font size=6 face="Ariel">Set Operation</font></u>
+<br>
+-> <font size= 5 face="Ariel">adding elements</font>
+<pre>A method which adds an element, which has to be immutable, to a set.
+>>> colours = {"red","green"}
+>>> colours.add("yellow")
+>>> colours
+set(['green', 'yellow', 'red'])
+>>> colours.add(["black","white"])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>>
+Of course, an element will only be added, if it is not already contained in the
+set. If it is already contained, the method call has no effect.</pre>
+<br>
+-> <font size= 5 face="Ariel">clear()</font>
+<pre>All elements will removed from a set.
+>>> cities = {"Stuttgart", "Konstanz", "Freiburg"}
+>>> cities.clear()
+>>> cities
+set([])
+>>> </pre>
+<br>
+-> <font size= 5 face="Ariel">copy</font>
+<pre>Creates a shallow copy, which is returned.
+>>> more_cities = {"Winterthur","Schaffhausen","St. Gallen"}
+>>> cities_backup = more_cities.copy()
+>>> more_cities.clear()
+>>> cities_backup
+set(['St. Gallen', 'Winterthur', 'Schaffhausen'])
+>>>
+</pre>
+<br>
+-> <font size= 5 face="Ariel">difference()</font>
+<pre>This method returns the difference of two or more sets as a new set.
+>>> x = {"a","b","c","d","e"}
+>>> y = {"b","c"}
+>>> z = {"c","d"}
+>>> x.difference(y)
+set(['a', 'e', 'd'])
+>>> x.difference(y).difference(z)
+set(['a', 'e'])
+>>> </pre>
+<br>
+-> <font size=5 face="Ariel">difference_update()</font>
+<pre>The method difference_update removes all elements of another set from this
+set. x.difference_update(y) is the same as "x = x - y"
+>>> x = {"a","b","c","d","e"}
+>>> y = {"b","c"}
+>>> x.difference_update(y)
+>>>
+>>> x = {"a","b","c","d","e"}
+>>> y = {"b","c"}
+>>> x = x - y
+>>> x
+set(['a', 'e', 'd'])
+>>> </pre>
+<br>
+-> <font size=5 face="Ariel">discard(element)</font>
+<pre>An element el will be removed from the set, if it is contained in the set.
+If el is not a member of the set, nothing will be done.
+>>> x = {"a","b","c","d","e"}
+>>> x.discard("a")
+>>> x
+set(['c', 'b', 'e', 'd'])
+>>> x.discard("z")
+>>> x
+set(['c', 'b', 'e', 'd'])
+>>>
+</pre>
+<br>
+-> <font size=5 face="Ariel">remove(element)</font>
+<pre>works like discard(), but if el is not a member of the set, a KeyError will be raised.
+	>>> x = {"a","b","c","d","e"}
+>>> x.remove("a")
+>>> x
+set(['c', 'b', 'e', 'd'])
+>>> x.remove("z")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'z'
+>>>
+	</pre>
+<br>
+-> <font size=5 face="Ariel">intersection(s)</font>
+<pre>Returns the intersection of the instance set and the set s as a new set.
+In other words: A set with all the elements which are contained in both sets is returned.
+>>> x = {"a","b","c","d","e"}
+>>> y = {"c","d","e","f","g"}
+>>> x.intersection(y)
+set(['c', 'e', 'd'])
+>>>
+This can be abbreviated with the ampersand operator "&":
+>>> x = {"a","b","c","d","e"}
+>>> y = {"c","d","e","f","g"}
+>>> x.intersection(y)
+set(['c', 'e', 'd'])
+>>>
+>>> x = {"a","b","c","d","e"}
+>>> y = {"c","d","e","f","g"}
+>>> x  & y
+set(['c', 'e', 'd'])
+>>> </pre>
+<br>
+-> <font size=5 face="Ariel">isdisjoint()</font>
+<pre>This method returns True if two sets have a null intersection.
+</pre>
+<br>
+-> <font size=5 face="Ariel">issubset()</font>
+<pre>x.issubset(y) returns True, if x is a subset of y. "<=" is an abbreviation for "Subset of"	and ">=" for "superset of"
+"<" is used to check if a set is a proper subset of a set.
+>>> x = {"a","b","c","d","e"}
+>>> y = {"c","d"}
+>>> x.issubset(y)
+False
+>>> y.issubset(x)
+True
+>>> x < y
+False
+>>> y < x # y is a proper subset of x
+True
+>>> x < x # a set can never be a proper subset of oneself.
+False
+>>> x <= x
+True
+>>>
+</pre>
+<br>
+-> <font size=5 face="Ariel">issuperset()</font>
+<pre>x.issuperset(y) returns True, if x is a superset of y. ">=" is an abbreviation for "issuperset of"
+">" is used to check if a set is a proper superset of a set.
+>>> x = {"a","b","c","d","e"}
+>>> y = {"c","d"}
+>>> x.issuperset(y)
+True
+>>> x > y
+True
+>>> x >= y
+True
+>>> x >= x
+True
+>>> x > x
+False
+>>> x.issuperset(x)
+True
+>>> </pre>
+<br>
+-> <font size=5 face="Ariel">pop()</font>
+<pre>pop() removes and returns an arbitrary set element. The method raises a
+KeyError if the set is empty
+>>> x = {"a","b","c","d","e"}
+>>> x.pop()
+'a'
+>>> x.pop()
+'c'</pre><!--https://developers.google.com/edu/python/strings--><br><br>
+<a name="Strings"><font size =13 face="Ariel">Strings</font></a>
+<pre>
+-> Python has a built-in string class named "str" with many handy features.
+-> String literals can be enclosed by either double or single quotes, although single
+quotes are more commonly used.
+-> Backslash escapes work the usual way within both single and double quoted literals
+-> Python strings are "immutable" which means they cannot be changed after they are created.
+-> Since strings can't be changed, we construct *new* strings as we go to represent
+computed values. So for example the expression ('hello' + 'there') takes in the 2 strings
+'hello' and 'there' and builds a new string 'hellothere'.
+-> Characters in a string can be accessed using the standard [ ] syntax
+->  Python uses zero-based indexing, so if str is 'hello' str[1] is 'e'.
+If the index is out of bounds for the string, Python raises an error.
+-> The len(string) function returns the length of a string. The [ ] syntax and
+the len() function actually work on any sequence type.
+-> Python tries to make its operations work consistently across different types.
+s = 'hi'
+ print s[1]          ## i
+ print len(s)        ## 2
+ print s + ' there'  ## hi there </pre><br>
+ <u><font size=8 face="Ariel">String Methods</font></u>
+ <pre> A method is like a function, but it runs "on" an object. If the variable s
+ is a string, then the code s.lower() runs the lower() method on that string object
+ and returns the result.
+ Here are some of the most common string methods:
+
+-> s.lower(), s.upper() -- returns the lowercase or uppercase version of the string
+-> s.strip() -- returns a string with whitespace removed from the start and end
+-> s.isalpha()/s.isdigit()/s.isspace()... -- tests if all the string chars are in the various character classes
+-> s.startswith('other'), s.endswith('other') -- tests if the string starts or ends with the given other string
+-> s.find('other') -- searches for the given other string (not a regular expression) within s, and returns the first index where it begins or -1 if not found
+-> s.replace('old', 'new') -- returns a string where all occurrences of 'old' have been replaced by 'new'
+-> s.split('delim') -- returns a list of substrings separated by the given delimiter. The delimiter is not a regular expression, it's just text. 'aaa,bbb,ccc'.split(',') -> ['aaa', 'bbb', 'ccc']. As a convenient special case s.split() (with no arguments) splits on all whitespace chars.
+-> s.join(list) -- opposite of split(), joins the elements in the given list together using the string as the delimiter.
+e.g. '---'.join(['aaa', 'bbb', 'ccc']) -> aaa---bbb---ccc
+</pre><br>
+<u><font size=8 face="Ariel">String Slices</font></u>
+<pre>The "slice" syntax is a handy way to refer to sub-parts of sequences -- typically strings and lists.
+The slice s[start:end] is the elements beginning at start and extending up to but not including end.
+Suppose we have s = "Hello"</pre>
+<br>
+<center><img src="hello.png"></center><!-- please try using this color as the background #FFFFFF so that it matches with this image-->
+<pre>
+-> s[1:4] is 'ell' -- chars starting at index 1 and extending up to but not including index 4
+-> s[1:] is 'ello' -- omitting either index defaults to the start or end of the string
+-> s[:] is 'Hello' -- omitting both always gives us a copy of the whole thing
+-> s[1:100] is 'ello' -- an index that is too big is truncated down to the string length
+</pre>
+<pre>
+Python uses negative numbers to give easy access to the chars at the end of the string:
+s[-1] is the last char 'o', s[-2] is 'l' the next-to-last char, and so on. Negative
+index numbers count back from the end of the string:
+
+-> s[-1] is 'o' -- last char (1st from the end)
+-> s[-4] is 'e' -- 4th from the end
+-> s[:-3] is 'He' -- going up to but not including the last 3 chars.
+-> s[-3:] is 'llo' -- starting with the 3rd char from the end and extending to the end of the string.
+</pre>
+<u><font size=8 face="Ariel">String %</font></u>
+<pre>
+Python has a printf()-like facility to put together a string. The % operator
+takes a printf-type format string on the left (%d int, %s string, %f/%g floating point),
+and the matching values in a tuple on the right.
+
+# % operator
+  text = "%d little guys come out or I'll %s and %s and %s" % (3, 'howl', 'bark', 'horn')
+
+	# add parens to make the long-line work:
+   text = ("%d little guys come out or I'll %s and %s and %s" %
+     (3, 'howl', 'bark', 'horn'))</pre>
+
+<u><font size=8 face="Ariel">i18n Strings (Unicode)</font></u>
+<pre>Regular Python strings are *not* unicode, they are just plain bytes. To create a
+unicode string, use the 'u' prefix on the string literal:
+
+> ustring = u'A unicode \u018e string \xf1'
+> ustring
+u'A unicode \u018e string \xf1'
+
+A unicode string is a different type of object from regular "str" string, but the
+unicode string is compatible (they share the common superclass "basestring"), and
+the various libraries such as regular expressions work correctly if passed a unicode
+string instead of a regular string.
+
+To convert a unicode string to bytes with an encoding such as 'utf-8', call the
+ustring.encode('utf-8') method on the unicode string. Going the other direction,
+the unicode(s, encoding) function converts encoded plain bytes to a unicode string:
+
+## (ustring from above contains a unicode string)
+> s = ustring.encode('utf-8')
+> s
+'A unicode \xc6\x8e string \xc3\xb1'  ## bytes of utf-8 encoding
+> t = unicode(s, 'utf-8')             ## Convert bytes back to a unicode string
+> t == ustring                      ## It's the same as the original
+True</pre>
+<br>
+<a name="arraysUsingNumPy"><font size =13 face="Ariel">Arrays Using Numpy</font></a>
+<font size="8" face = 'ariel'>Numpy</font>
+<pre>Numpy is the core library for scientific computing in Python. It provides a
+high-performance multidimensional array object, and tools for working with these arrays.
+If you are already familiar with MATLAB, you might find this tutorial useful to get started with Numpy.
+</pre>
+<br>
+<font size="8" face = 'ariel'>Arrays</font>
+<pre>
+A numpy array is a grid of values, all of the same type, and is indexed by a tuple
+of nonnegative integers. The number of dimensions is the rank of the array; the shape of an array
+is a tuple of integers giving the size of the array along each dimension.
+
+We can initialize numpy arrays from nested Python lists, and access elements using square brackets:
+
+import numpy as np
+
+a = np.array([1, 2, 3])   # Create a rank 1 array
+print(type(a))            # Prints "<class 'numpy.ndarray'>"
+print(a.shape)            # Prints "(3,)"
+print(a[0], a[1], a[2])   # Prints "1 2 3"
+a[0] = 5                  # Change an element of the array
+print(a)                  # Prints "[5, 2, 3]"
+
+b = np.array([[1,2,3],[4,5,6]])    # Create a rank 2 array
+print(b.shape)                     # Prints "(2, 3)"
+print(b[0, 0], b[0, 1], b[1, 0])   # Prints "1 2 4"
+Numpy also provides many functions to create arrays:
+
+import numpy as np
+
+a = np.zeros((2,2))   # Create an array of all zeros
+print(a)              # Prints "[[ 0.  0.]
+                      #          [ 0.  0.]]"
+
+b = np.ones((1,2))    # Create an array of all ones
+print(b)              # Prints "[[ 1.  1.]]"
+
+c = np.full((2,2), 7)  # Create a constant array
+print(c)               # Prints "[[ 7.  7.]
+                       #          [ 7.  7.]]"
+
+d = np.eye(2)         # Create a 2x2 identity matrix
+print(d)              # Prints "[[ 1.  0.]
+                      #          [ 0.  1.]]"
+
+e = np.random.random((2,2))  # Create an array filled with random values
+print(e)                     # Might print "[[ 0.91940167  0.08143941]
+                             #               [ 0.68744134  0.87236687]]"
+</pre>
+<pre> You can read more about other methods in this </pre><p><a href="http://docs.scipy.org/doc/numpy/user/basics.creation.html#arrays-creation">Documentation</a>
+	<br>
+	<font size="8" face = 'ariel'>Array indexing</font>
+<pre>
+	Numpy offers several ways to index into arrays.
+
+	Slicing: Similar to Python lists, numpy arrays can be sliced. Since arrays may be multidimensional,
+	you must specify a slice for each dimension of the array:
+
+	import numpy as np
+
+	# Create the following rank 2 array with shape (3, 4)
+	# [[ 1  2  3  4]
+	#  [ 5  6  7  8]
+	#  [ 9 10 11 12]]
+	a = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])
+
+	# Use slicing to pull out the subarray consisting of the first 2 rows
+	# and columns 1 and 2; b is the following array of shape (2, 2):
+	# [[2 3]
+	#  [6 7]]
+	b = a[:2, 1:3]
+
+	# A slice of an array is a view into the same data, so modifying it
+	# will modify the original array.
+	print(a[0, 1])   # Prints "2"
+	b[0, 0] = 77     # b[0, 0] is the same piece of data as a[0, 1]
+	print(a[0, 1])   # Prints "77"
+
+	You can also mix integer indexing with slice indexing. However, doing so will yield an
+	array of lower rank than the original array. Note that this is quite different from the way
+	that MATLAB handles array slicing:
+
+	import numpy as np
+
+	# Create the following rank 2 array with shape (3, 4)
+	# [[ 1  2  3  4]
+	#  [ 5  6  7  8]
+	#  [ 9 10 11 12]]
+	a = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])
+
+	# Two ways of accessing the data in the middle row of the array.
+	# Mixing integer indexing with slices yields an array of lower rank,
+	# while using only slices yields an array of the same rank as the
+	# original array:
+	row_r1 = a[1, :]    # Rank 1 view of the second row of a
+	row_r2 = a[1:2, :]  # Rank 2 view of the second row of a
+	print(row_r1, row_r1.shape)  # Prints "[5 6 7 8] (4,)"
+	print(row_r2, row_r2.shape)  # Prints "[[5 6 7 8]] (1, 4)"
+
+	# We can make the same distinction when accessing columns of an array:
+	col_r1 = a[:, 1]
+	col_r2 = a[:, 1:2]
+	print(col_r1, col_r1.shape)  # Prints "[ 2  6 10] (3,)"
+	print(col_r2, col_r2.shape)  # Prints "[[ 2]
+	                             #          [ 6]
+	                             #          [10]] (3, 1)"
+	Integer array indexing: When you index into numpy arrays using slicing, the resulting
+	array view will always be a subarray of the original array. In contrast, integer array indexing
+	allows you to construct arbitrary arrays using the data from another array. Here is an example:
+
+	import numpy as np
+
+	a = np.array([[1,2], [3, 4], [5, 6]])
+
+	# An example of integer array indexing.
+	# The returned array will have shape (3,) and
+	print(a[[0, 1, 2], [0, 1, 0]])  # Prints "[1 4 5]"
+
+	# The above example of integer array indexing is equivalent to this:
+	print(np.array([a[0, 0], a[1, 1], a[2, 0]]))  # Prints "[1 4 5]"
+
+	# When using integer array indexing, you can reuse the same
+	# element from the source array:
+	print(a[[0, 0], [1, 1]])  # Prints "[2 2]"
+
+	# Equivalent to the previous integer array indexing example
+	print(np.array([a[0, 1], a[0, 1]]))  # Prints "[2 2]"
+	One useful trick with integer array indexing is selecting or mutating one element from each row of a matrix:
+
+	import numpy as np
+
+	# Create a new array from which we will select elements
+	a = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+
+	print(a)  # prints "array([[ 1,  2,  3],
+	          #                [ 4,  5,  6],
+	          #                [ 7,  8,  9],
+	          #                [10, 11, 12]])"
+
+	# Create an array of indices
+	b = np.array([0, 2, 0, 1])
+
+	# Select one element from each row of a using the indices in b
+	print(a[np.arange(4), b])  # Prints "[ 1  6  7 11]"
+
+	# Mutate one element from each row of a using the indices in b
+	a[np.arange(4), b] += 10
+
+	print(a)  # prints "array([[11,  2,  3],
+	          #                [ 4,  5, 16],
+	          #                [17,  8,  9],
+	          #                [10, 21, 12]])
+	Boolean array indexing: Boolean array indexing lets you pick out arbitrary elements of an array.
+	Frequently this type of indexing is used to select the elements of an array that satisfy some condition.
+
+	Here is an example:
+
+	import numpy as np
+
+	a = np.array([[1,2], [3, 4], [5, 6]])
+
+	bool_idx = (a > 2)   # Find the elements of a that are bigger than 2;
+	                     # this returns a numpy array of Booleans of the same
+	                     # shape as a, where each slot of bool_idx tells
+	                     # whether that element of a is > 2.
+
+	print(bool_idx)      # Prints "[[False False]
+	                     #          [ True  True]
+	                     #          [ True  True]]"
+
+	# We use boolean array indexing to construct a rank 1 array
+	# consisting of the elements of a corresponding to the True values
+	# of bool_idx
+	print(a[bool_idx])  # Prints "[3 4 5 6]"
+
+	# We can do all of the above in a single concise statement:
+	print(a[a > 2])     # Prints "[3 4 5 6]"
+</pre>
+<p>If you want to know more about numpy array indexing refer this<a href="http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html">Documentation</a></p>
+<br>
+<font size="8" face = 'ariel'>Datatypes</font>
+<pre>
+	Every numpy array is a grid of elements of the same type. Numpy provides a large set of numeric datatypes
+	that you can use to construct arrays. Numpy tries to guess a datatype when you create an array,
+	but functions that construct arrays usually also include an optional argument to explicitly specify the datatype.
+	Here is an example:
+
+	import numpy as np
+
+	x = np.array([1, 2])   # Let numpy choose the datatype
+	print(x.dtype)         # Prints "int64"
+
+	x = np.array([1.0, 2.0])   # Let numpy choose the datatype
+	print(x.dtype)             # Prints "float64"
+
+	x = np.array([1, 2], dtype=np.int64)   # Force a particular datatype
+	print(x.dtype)                         # Prints "int64"
+</pre>
+<br>
+<font size="8" face = 'ariel'>Array math</font>
+<pre>
+	Basic mathematical functions operate elementwise on arrays, and are available both as operator
+	overloads and as functions in the numpy module:
+
+	import numpy as np
+
+	x = np.array([[1,2],[3,4]], dtype=np.float64)
+	y = np.array([[5,6],[7,8]], dtype=np.float64)
+
+	# Elementwise sum; both produce the array
+	# [[ 6.0  8.0]
+	#  [10.0 12.0]]
+	print(x + y)
+	print(np.add(x, y))
+
+	# Elementwise difference; both produce the array
+	# [[-4.0 -4.0]
+	#  [-4.0 -4.0]]
+	print(x - y)
+	print(np.subtract(x, y))
+
+	# Elementwise product; both produce the array
+	# [[ 5.0 12.0]
+	#  [21.0 32.0]]
+	print(x * y)
+	print(np.multiply(x, y))
+
+	# Elementwise division; both produce the array
+	# [[ 0.2         0.33333333]
+	#  [ 0.42857143  0.5       ]]
+	print(x / y)
+	print(np.divide(x, y))
+
+	# Elementwise square root; produces the array
+	# [[ 1.          1.41421356]
+	#  [ 1.73205081  2.        ]]
+	print(np.sqrt(x))
+	Note that unlike MATLAB, * is elementwise multiplication, not matrix multiplication.
+We instead use the dot function to compute inner products of vectors, to multiply a vector by a matrix,
+and to multiply matrices. dot is available both as a function in the numpy module and as an instance method of array objects:
+
+	import numpy as np
+
+	x = np.array([[1,2],[3,4]])
+	y = np.array([[5,6],[7,8]])
+
+	v = np.array([9,10])
+	w = np.array([11, 12])
+
+	# Inner product of vectors; both produce 219
+	print(v.dot(w))
+	print(np.dot(v, w))
+
+	# Matrix / vector product; both produce the rank 1 array [29 67]
+	print(x.dot(v))
+	print(np.dot(x, v))
+
+	# Matrix / matrix product; both produce the rank 2 array
+	# [[19 22]
+	#  [43 50]]
+	print(x.dot(y))
+	print(np.dot(x, y))
+	Numpy provides many useful functions for performing computations on arrays; one of the most useful is sum:
+
+	import numpy as np
+
+	x = np.array([[1,2],[3,4]])
+
+	print(np.sum(x))  # Compute sum of all elements; prints "10"
+	print(np.sum(x, axis=0))  # Compute sum of each column; prints "[4 6]"
+	print(np.sum(x, axis=1))  # Compute sum of each row; prints "[3 7]"
+
+
+	Apart from computing mathematical functions using arrays, we frequently need to reshape or otherwise
+	manipulate data in arrays. The simplest example of this type of operation is transposing a matrix; to transpose a matrix,
+	simply use the T attribute of an array object:
+
+import numpy as np
+
+x = np.array([[1,2], [3,4]])
+print(x)    # Prints "[[1 2]
+            #          [3 4]]"
+print(x.T)  # Prints "[[1 3]
+            #          [2 4]]"
+
+# Note that taking the transpose of a rank 1 array does nothing:
+v = np.array([1,2,3])
+print(v)    # Prints "[1 2 3]"
+print(v.T)  # Prints "[1 2 3]"
+</pre>
+<br>
+<font size="8" face = 'ariel'>Broadcasting</font>
+<pre>
+Broadcasting is a powerful mechanism that allows numpy to work with arrays of different shapes when
+performing arithmetic operations. Frequently we have a smaller array and a larger array, and we want to use the smaller array multiple times to perform some operation on the larger array.
+
+	For example, suppose that we want to add a constant vector to each row of a matrix. We could do it like this:
+
+	import numpy as np
+
+	# We will add the vector v to each row of the matrix x,
+	# storing the result in the matrix y
+	x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+	v = np.array([1, 0, 1])
+	y = np.empty_like(x)   # Create an empty matrix with the same shape as x
+
+	# Add the vector v to each row of the matrix x with an explicit loop
+	for i in range(4):
+	    y[i, :] = x[i, :] + v
+
+	# Now y is the following
+	# [[ 2  2  4]
+	#  [ 5  5  7]
+	#  [ 8  8 10]
+	#  [11 11 13]]
+	print(y)
+	This works; however when the matrix x is very large, computing an explicit loop in Python could be slow.
+	Note that adding the vector v to each row of the matrix x is equivalent to forming a matrix vv by stacking
+	multiple copies of v vertically, then performing elementwise summation of x and vv. We could implement this
+	approach like this:
+
+	import numpy as np
+
+	# We will add the vector v to each row of the matrix x,
+	# storing the result in the matrix y
+	x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+	v = np.array([1, 0, 1])
+	vv = np.tile(v, (4, 1))   # Stack 4 copies of v on top of each other
+	print(vv)                 # Prints "[[1 0 1]
+	                          #          [1 0 1]
+	                          #          [1 0 1]
+	                          #          [1 0 1]]"
+	y = x + vv  # Add x and vv elementwise
+	print(y)  # Prints "[[ 2  2  4
+	          #          [ 5  5  7]
+	          #          [ 8  8 10]
+	          #          [11 11 13]]"
+	Numpy broadcasting allows us to perform this computation without actually creating multiple copies of v.
+	Consider this version, using broadcasting:
+
+	import numpy as np
+
+	# We will add the vector v to each row of the matrix x,
+	# storing the result in the matrix y
+	x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+	v = np.array([1, 0, 1])
+	y = x + v  # Add v to each row of x using broadcasting
+	print(y)  # Prints "[[ 2  2  4]
+	          #          [ 5  5  7]
+	          #          [ 8  8 10]
+	          #          [11 11 13]]"
+
+	The line y = x + v works even though x has shape (4, 3) and v has shape (3,) due to broadcasting;
+	this line works as if v actually had shape (4, 3), where each row was a copy of v, and the sum was performed elementwise.
+
+	Broadcasting two arrays together follows these rules:
+
+	If the arrays do not have the same rank, prepend the shape of the lower rank array with 1s until both shapes have the same length.
+
+	The two arrays are said to be compatible in a dimension if they have the same size in the dimension, or if one of the arrays has size 1 in that dimension.
+
+	The arrays can be broadcast together if they are compatible in all dimensions.
+
+	After broadcasting, each array behaves as if it had shape equal to the elementwise maximum of shapes of the two input arrays.
+	In any dimension where one array had size 1 and the other array had size greater than 1, the first array behaves
+	as if it were copied along that dimension.
+
+
+	Here are some applications of broadcasting:
+
+import numpy as np
+
+# Compute outer product of vectors
+v = np.array([1,2,3])  # v has shape (3,)
+w = np.array([4,5])    # w has shape (2,)
+# To compute an outer product, we first reshape v to be a column
+# vector of shape (3, 1); we can then broadcast it against w to yield
+# an output of shape (3, 2), which is the outer product of v and w:
+# [[ 4  5]
+#  [ 8 10]
+#  [12 15]]
+print(np.reshape(v, (3, 1)) * w)
+
+# Add a vector to each row of a matrix
+x = np.array([[1,2,3], [4,5,6]])
+# x has shape (2, 3) and v has shape (3,) so they broadcast to (2, 3),
+# giving the following matrix:
+# [[2 4 6]
+#  [5 7 9]]
+print(x + v)
+
+# Add a vector to each column of a matrix
+# x has shape (2, 3) and w has shape (2,).
+# If we transpose x then it has shape (3, 2) and can be broadcast
+# against w to yield a result of shape (3, 2); transposing this result
+# yields the final result of shape (2, 3) which is the matrix x with
+# the vector w added to each column. Gives the following matrix:
+# [[ 5  6  7]
+#  [ 9 10 11]]
+print((x.T + w).T)
+# Another solution is to reshape w to be a column vector of shape (2, 1);
+# we can then broadcast it directly against x to produce the same
+# output.
+print(x + np.reshape(w, (2, 1)))
+
+# Multiply a matrix by a constant:
+# x has shape (2, 3). Numpy treats scalars as arrays of shape ();
+# these can be broadcast together to shape (2, 3), producing the
+# following array:
+# [[ 2  4  6]
+#  [ 8 10 12]]
+print(x * 2)
+Broadcasting typically makes your code more concise and faster, so you should strive to use it where possible.
+</pre>
+</div>
+<footer>
+	<div class="container">
+		<nav>
+			<ul>
+				<li class="current"> <a href="index.html"> <img src="tt.png"  style="width:25px;height:25px;"> </a></li>
+				<li><a href="tutorial.html"><img src="fb.png"  style="width:33px;height:25px;"></a></li>
+				<li><a href="projects.html"><img src="insta.png"  style="width:25px;height:25px;"></a></li>
+			</ul>
+		</nav>
+		<div id="f_middle">
+			<p>Abhishek Mashetty  &copy; 2017</p>
+		</div>
+	</div>
+</footer>
+		</body>
+		</html>

@@ -1,0 +1,474 @@
+<!Doctype html>
+
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Affordable and profession web desginer">
+		<meta name="Keywords" content="web design,affordable web design">
+		<meta name="author" content="Abhishek Mashetty">
+		<title>Python Programming | About</title>
+		<link rel="stylesheet" type="text/css" href="how.css"/>
+		<link rel="icon" href="AM.png">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+		<script>
+			//paste this code under head tag or in a seperate js file.
+			// Wait for window load
+			$(window).load(function() {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+			});
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">Python Programming</span> </h1>
+				</div>
+				<nav>
+					<ul>
+					<li ><a href="index.html">Home</a></li>
+					<li class="current"><a href="tutorial.html">Tutorials</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="projects.html#about">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+<div class = "container">
+<a name = "syntax"><font size = '13' face = 'ariel'>Syntax</font></a>
+<pre>
+A Python program is read by a parser. Python was designed to be a highly readable
+language. The syntax of the Python programming language is the set of rules which defines
+how a Python program will be written.
+</pre>
+<br>
+<font size = '6' face = 'ariel'>Python Line Structure</font>
+<pre>
+	A Python program is divided into a number of logical lines and every logical
+line is terminated by the token NEWLINE. A logical line is created from one or more
+physical lines.A line contains only spaces, tabs, formfeeds possibly a comment,
+is known as a blank line, and Python interpreter ignores it.A physical line is a
+sequence of characters terminated by an end-of-line sequence
+(in windows it is called CR LF or return followed by a linefeed and in Unix, it is called LF or linefeed).
+</pre>
+<img src = "01.png" height = "495.25" width = "727.66"/>
+<br>
+<br>
+<a name = "comments"><font size = '6' face = 'ariel'>Comments in Python</font></a>
+<pre>
+A comment begins with a hash character(#) which is not a part of the string
+literal and ends at the end of the physical line. All characters after the #
+character up to the end of the line are part of the comment and the Python interpreter
+ignores them. See the following example. It should be noted that Python has no multi-lines
+or block comments facility.
+</pre>
+<img src = "02.png" height = "495.25" width = "727.66"/>
+<br>
+<font size = '6' face = 'ariel'>Joining two lines</font>
+<pre>
+	When you want to write a long code in a single line you can break the logical
+	line in two or more physical lines using backslash character(\). Therefore when
+	a physical line ends with a backslash characters(\) and not a part of a string literal
+	or comment then it can join another physical line. See the following example
+</pre>
+<img src = "03.png" height = "495.25" width = "727.66"/>
+<br>
+<font size = '6' face = 'ariel'>Multiple Statements on a Single Line</font>
+<pre>
+You can write two separate statements into a single line using a semicolon (;) character between two line
+</pre>
+<img src = "04.png" height = "495.25" width = "727.66"/>
+<br>
+<font size = '6' face = 'ariel'>Indentation</font>
+<pre>
+Python uses whitespace (spaces and tabs) to define program blocks whereas other
+languages like C, C++ use braces ({}) to indicate blocks of codes for class, functions
+or flow control. The number of whitespaces (spaces and tabs) in the indentation is not fixed,
+but all statements within the block must be the indented same amount. In the following program,
+the block statements have no indentation.
+
+This is a program with single space indentation
+</pre>
+<img src = "05.png" height = "495.25" width = "727.66"/>
+<pre>This is a program with single tab indentation</pre>
+<img src = "06.png" height = "495.25" width = "727.66"/>
+<pre>Here is an another program with an indentation of a single space + a single tab.</pre>
+<img src = "07.png" height = "495.25" width = "727.66"/>
+<br>
+<br>
+<font size = '6' face = 'ariel'>Python Coding Style</font>
+<pre>
+	-> Use 4 spaces per indentation and no tabs.
+	-> Do not mix tabs and spaces. Tabs create confusion and it is recommended to use only spaces.
+	-> Maximum line length : 79 characters which help users with a small display.
+	-> Use blank lines to separate top-level function and class definitions and single blank
+	   line to separate methods definitions inside a class and larger blocks of code inside functions.
+	-> When possible, put inline comments (should be complete sentences).
+	-> Use spaces around expressions and statements.
+</pre>
+<br><br>
+<a name = "keywordIdentifiers"><font size = "13" face = "ariel">Keywords Identifiers</font></a>
+<table cellpadding="2" cellspacing="2" border="1">
+<tbody><tr>
+<td>False</td>
+<td>class</td>
+<td>finally</td>
+<td>is</td>
+<td>return</td>
+</tr>
+<tr>
+<td>None</td>
+<td>continue</td>
+<td>for</td>
+<td>lambda</td>
+<td>try</td>
+</tr>
+<tr>
+<td>True</td>
+<td>def</td>
+<td>from</td>
+<td>nonlocal</td>
+<td>while</td>
+</tr>
+<tr>
+<td>and</td>
+<td>del</td>
+<td>global</td>
+<td>not</td>
+<td>with</td>
+</tr>
+<tr>
+<td>as</td>
+<td>el</td>
+<td>if</td>
+<td>or</td>
+<td>yield</td>
+</tr>
+<tr>
+<td>assert</td>
+<td>else</td>
+<td>import</td>
+<td>pass</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>break</td>
+<td>except</td>
+<td>in</td>
+<td>raise</td>
+<td>&nbsp;</td>
+</tr>
+</tbody></table>
+<br><br>
+<a name="operators"><font size = "13" face = "ariel">Python Operators</font></a>
+<pre>In computer programming languages operators are special symbols which represent computations,
+conditional matching etc. The values the operator uses are called operands.
+
+c = a + b
+Here a and b are called operands and '+' is an operator
+Python supports following operators.
+
+Arithmetic Operators
+Comparison Operators
+Logical Operators
+Assignment Operators
+Bitwise Operator
+Conditional Operators</pre>
+<br>
+<font size = "6" face = "ariel">Python Arithmetic Operators</font>
+<hr>
+<table cellpadding="2" cellspacing="2" border="1">
+<tbody><tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+<tr>
+<td> +</td>
+<td>Addition</td>
+<td>x+y</td>
+<td>Sum of x and y.</td>
+</tr>
+<tr>
+<td> -</td>
+<td>Subtraction</td>
+<td>x-y</td>
+<td>Difference of x and y.</td>
+</tr>
+<tr>
+<td> *</td>
+<td>Multiplication</td>
+<td>x*y</td>
+<td>Product of x and y.</td>
+</tr>
+<tr>
+<td> /</td>
+<td>Division</td>
+<td>x/y</td>
+<td>Quotient of x and y.</td>
+</tr>
+<tr>
+<td> %</td>
+<td>Modulus</td>
+<td>x%y</td>
+<td>Remainder of x
+divided by y.</td>
+</tr>
+<tr>
+<td>**</td>
+<td>Exponent</td>
+<td>x**y </td>
+<td>x**y will give x to the power y </td>
+</tr>
+<tr>
+<td> // </td>
+<td>Floor Division</td>
+<td>x/ y </td>
+<td>The division of operands where the result is the quotient in which the digits after the decimal point are removed.</td>
+</tr>
+</tbody></table><br><br>
+<img src = "o1.png" height = "495.25" width = "727.66"/>
+<br>
+<font size = "6" face = "ariel">Python Comparision Operators</font>
+<hr>
+<table cellpadding="2" cellspacing="2" border="1">
+	<tbody><tr>
+	<th>Operator</th>
+	<th>Name</th>
+	<th>Example</th>
+	<th>Result</th>
+	</tr>
+	<tr>
+	<td> == </td>
+	<td>Equal</td>
+	<td>x==y</td>
+	<td>True if x is exactly equal to y.</td>
+	</tr>
+	<tr>
+	<td>!=</td>
+	<td>Not equal</td>
+	<td>x!=y</td>
+	<td>True if x is exactly not equal to y.</td>
+	</tr>
+	<tr>
+	<td>&gt;</td>
+	<td>Greater than</td>
+	<td>x&gt;y</td>
+	<td>True if x (left-hand argument) is greater than y (right-hand argument).</td>
+	</tr>
+	<tr>
+	<td>&lt;</td>
+	<td>Less than</td>
+	<td>x&lt;y</td>
+	<td>True if x (left-hand argument) is less than y (right-hand argument).</td>
+	</tr>
+	<tr>
+	<td>&gt;=</td>
+	<td>Greater than or equal to</td>
+	<td>x&gt;=y </td>
+	<td>True if x (left-hand argument) is greater than or equal to y (left-hand argument). </td>
+	</tr>
+	<tr>
+	<td>&lt;=</td>
+	<td>Less than or equal to</td>
+	<td>x&lt;=y</td>
+	<td>True if x (left-hand argument) is less than or equal to y (right-hand argument).</td>
+	</tr>
+	</tbody>
+</table>
+<br><br>
+<img src = "o2.png" height = "495.25" width = "727.66"/>
+<br>
+<font size = "6" face = "ariel">Python Logical Operators</font>
+<hr>
+<table cellpadding="2" cellspacing="2" border="1">
+	<tbody><tr>
+	<th>Operator</th>
+	<th>Example</th>
+	<th>Result</th>
+	</tr>
+	<tr>
+	<td>and</td>
+	<td>(x and y)</td>
+	<td>is True if both x and y are true.</td>
+	</tr>
+	<tr>
+	<td>or</td>
+	<td> (x or y)</td>
+	<td>is True if either x or y is true.</td>
+	</tr>
+	<tr>
+	<td>not</td>
+	<td>(x not y)</td>
+	<td>If a condition is true then Logical not operator will make false.</td>
+	</tr>
+	</tbody>
+</table>
+<br><br>
+<img src = "o3.png" height = "495.25" width = "727.66"/>
+<br>
+<br>
+<font size = "6" face = "ariel">Python Assignment Operators</font>
+<hr>
+<table cellpadding="2" cellspacing="2" border="1">
+	<tbody><tr>
+	<th>Operator</th>
+	<th>Shorthand</th>
+	<th>Expression</th>
+	<th>Description</th>
+	</tr>
+	<tr>
+	<td> +=</td>
+	<td>x+=y</td>
+	<td>x =&nbsp;x +&nbsp;y</td>
+	<td>Adds 2 numbers and assigns the result to left operand.</td>
+	</tr>
+	<tr>
+	<td>-=</td>
+	<td>x-=&nbsp;y</td>
+	<td>x = x -y</td>
+	<td>Subtracts 2 numbers and assigns the result to left operand.</td>
+	</tr>
+	<tr>
+	<td>*=</td>
+	<td>x*= y </td>
+	<td>x =&nbsp;x*y</td>
+	<td>Multiplies 2 numbers and assigns the result to left operand.</td>
+	</tr>
+	<tr>
+	<td>/=</td>
+	<td>x/=&nbsp;y</td>
+	<td>x =&nbsp;x/y</td>
+	<td>Divides 2 numbers and assigns the result to left operand.</td>
+	</tr>
+	<tr>
+	<td>%=</td>
+	<td>x%= y</td>
+	<td>x =&nbsp;x%y</td>
+	<td>Computes the modulus of 2 numbers and assigns the result to left operand.</td>
+	</tr>
+	<tr>
+	<td>**=</td>
+	<td>x**=y</td>
+	<td>x = x**y </td>
+	<td> Performs exponential (power) calculation on operators and assign value to the equivalent to left operand.</td>
+	</tr>
+	<tr>
+	<td>//=</td>
+	<td>x//=y</td>
+	<td>x = x//y</td>
+	<td>Performs floor division on operators and assign value to the left operand.</td>
+	</tr>
+	</tbody>
+</table>
+<br><br>
+<img src = "o4.png" height = "495.25" width = "727.66"/>
+<br>
+<br>
+<font size = "6" face = "ariel">Python Bitwise Operators</font>
+<hr>
+<table cellpadding="2" cellspacing="2" border="1">
+	<tbody><tr>
+<th>Operator</th>
+<th>Shorthand</th>
+<th>Expression</th>
+<th>Description</th>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td>And</td>
+<td>x &amp; y</td>
+<td>Bits that are set in both x and y are set.</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td>Or</td>
+<td>x | y</td>
+<td>Bits that are set in either x or y are set.</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td>Xor</td>
+<td>x ^ y</td>
+<td>Bits that are set in x or y but not both are set.</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td>Not</td>
+<td>~x</td>
+<td>Bits that are set in x are not set, and vice versa.</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td>Shift left</td>
+<td>x &lt;&lt;y</td>
+<td>Shift the bits of x, y steps to the left</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td>Shift right</td>
+<td>x &gt;&gt;y</td>
+<td>Shift the bits of x, y steps to the right.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<pre>
+# Each step means 'multiply by two'
+* Each step means 'divide by two'</pre>
+<font size = "6" face = "ariel">Conditional Operators</font>
+<hr>
+<pre>
+Conditional expressions or ternary operator have the lowest priority of all Python
+operations. The expression x if C else y first evaluates the condition, C (not x);
+if C is true, x is evaluated and its value is returned; otherwise, y is evaluated
+and its value is returned.
+</pre>
+<br><br>
+<a name = "precedence"><font size = "13" face = "ariel">Precedence</font></a>
+<br><br>
+<img src = "precedance.jpg"/>
+<br><br>
+<a name = "import"><font size = "13" face = "ariel">Import</font></a>
+<br><br>
+<pre>Python code in one module gains access to the code in another module by the
+process of importing it. The import statement is the most common way of invoking
+the import machinery, but it is not the only way. Functions such as importlib.import_module()
+and built-in __import__() can also be used to invoke the import machinery.
+
+The import statement combines two operations; it searches for the named module,
+then it binds the results of that search to a name in the local scope. The search
+operation of the import statement is defined as a call to the __import__() function,
+with the appropriate arguments. The return value of __import__() is used to perform
+the name binding operation of the import statement. See the import statement for the exact
+details of that name binding operation.
+
+A direct call to __import__() performs only the module search and, if found,
+the module creation operation. While certain side-effects may occur, such as the
+importing of parent packages, and the updating of various caches (including sys.modules),
+only the import statement performs a name binding operation.
+
+When calling __import__() as part of an import statement, the standard builtin
+__import__() is called. Other mechanisms for invoking the import system (such as importlib.import_module())
+may choose to subvert __import__() and use its own solution to implement import semantics.
+
+When a module is first imported, Python searches for the module and if found, it
+creates a module object [1], initializing it. If the named module cannot be found,
+a ModuleNotFoundError is raised. Python implements various strategies to search for
+the named module when the import machinery is invoked. These strategies can be modified
+and extended by using various hooks described in the sections below.
+
+Changed in version 3.3: The import system has been updated to fully implement the
+second phase of PEP 302. There is no longer any implicit import machinery - the full
+import system is exposed through sys.meta_path. In addition, native namespace package
+support has been implemented </pre>
+
+<p> If you want to know more about the import system in python please refer <a href="https://docs.python.org/3/reference/import.html">This site </a>
+</div>

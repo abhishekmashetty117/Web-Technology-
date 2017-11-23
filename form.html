@@ -1,0 +1,45 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Affordable and profession web desginer">
+		<meta name="Keywords" content="web design,affordable web design">
+		<meta name="author" content="Abhishek Mashetty">
+		<meta name="revised" content="15/08/2017">
+		<!--<meta http-equiv="refresh" content="5" href="">-->
+		<title>Python Programming | Form</title>
+		<link rel="icon" href="AM.png">
+		<link rel = "stylesheet" href = "style.css">
+	</head>
+	
+<body>
+	<div class = "login-page">
+	<div class = "form">
+		<form class="register-form">
+		<input type= "text" placeholder="name">
+		<input type= "text" placeholder="password">
+		<input type= "text" placeholder="email id">
+		<button>Create</button>
+		<p class = "message">Already Registered? <a href= "#Login"> login </a>
+		</p>
+		</form>
+		
+		<form class ="login-form">
+		<input type="text" placeholder = "user name">
+		<input type="password" placeholder = "password">
+		<button>login</button>
+		<p class="message">Not Registered? <a href ="#Register">Register</a></p>
+		</form>
+		
+	 </div>
+	</div>
+	
+	<script src = 'https://code.jquery.com/jquery-3.2.1.min.js'>
+	</script>
+	<script>
+	$('.message a').click(function(){
+	$('form').animate({height : "toggle", opacity: "toggle"},"slow");
+	});
+	</script>
+</body>
+</html>

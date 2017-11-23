@@ -1,0 +1,74 @@
+body{
+	font: 15px/1.5 Arial,Helvetica,sans-serif;
+	padding:0;
+	margin:0;
+	background-color:#f4f4f4;
+	width:60%;
+	margin:auto;
+	overflow:scroll;
+}
+
+
+#main_form {
+	
+	box-shadow: 1px 6px 8px 0 rgba(0,0,0,0.16),0 4px 10px 0 rgba(0,0,0,0.12) ;   
+}
+
+#main_form {
+	margin: 20px 0;
+    font-family: Consolas,"courier new";
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: #fff;
+    padding: 8px 12px 8px 12px;
+    border-top-width: 6px;
+    border-top-style: groove;
+    border-top-color: indigo;        /* color which changes left border and the download button */
+    word-wrap: break-word;
+}
+
+#hr_line{
+    border-top-width: 2px;
+    border-top-style: groove;
+    border-top-color: indigo;
+}
+
+#questions{
+	margin-left:0px;
+}
+#first{
+	float:left;
+}
+#first_left{
+	float:left;
+}
+#first_right{
+	float:right;
+}
+/*#second{
+	float:right;
+}*/
+a.up:hover, a.up:active {
+    color: #1c1a1a;
+	background-color: #FFFFFF;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+a.up {
+    color: #FFFFFF;
+    background-color: orange;
+	
+}
+
+.n_bottom {
+    margin-bottom: 16px ;
+}
+
+.up {
+    display: inline;
+    padding-top: 6px;
+    padding-right: 16px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    text-decoration-line: none;
+}

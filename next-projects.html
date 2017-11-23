@@ -1,0 +1,213 @@
+<!Doctype html>
+
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Affordable and profession web desginer">
+		<meta name="Keywords" content="web design,affordable web design">
+		<meta neme="author" content="Abhishek Mashetty">
+		<title>Python Programming | Serives</title>
+		<link rel="stylesheet" type="text/css" href="how.css"/>
+		<link rel="stylesheet" type="text/css" href="second.css"/>
+		<link rel="icon" href="AM.png">
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		
+		<script>
+			//paste this code under head tag or in a seperate js file.
+			// Wait for window load
+			$(window).load(function() {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+			});
+		</script>
+
+	</head>
+
+	
+	
+	<body>	
+	
+<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">Python Programming</span></h1>
+					
+				</div>
+				<nav>
+					<ul>
+					<li ><a href="index.html">Home</a></li>
+					<li ><a href="tutorial.html">Tutorials</a></li>
+					<li class="current"><a href="projects.html">Projects</a></li>
+					<li><a href="quiz.html">Quiz</a></li>
+					<li><a href="projects.html#about">About</a></li>
+					<li><a href="form.html">Login/Register</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<br/><br/><br/>
+
+	<div class= "new">
+			<div id="template">
+				<div class="template_box">
+				<h3>VOWELS & CONSONANTS</h3>
+<pre>
+This program checks whether in a given string how many number of vowels are there
+and how many number of consonants are there in the string.
+</pre>				
+					<div class="template_inside_box">
+						<p><pre>
+#vowel count using while
+
+P=input('ENTER THE STRING')
+i=P.lower()
+b=list(i)
+v='a','e','i','o','u'
+k=0
+m=0
+n=0
+while(k<5):
+    if v[k] in i :     #or v[k] in P or v[k] in b
+        s=i.count(v[k])
+        m=m+s
+    k=k+1
+    
+print('THE NUMBER OF VOWELS IN THE GIVEN STRING: ',P,'IS',m)
+print('THE NUMBER OF CONSONANTS IN THE GIVEN STRING: ',P,'IS',len(P)-m-n)
+
+
+#vowel count using remove
+
+P=input('ENTER THE STRING')
+P=P.lower()
+i=list(P)
+v='a','e','i','o','u'
+k=0
+while(k<5):
+   if v[k] in i:
+     i.remove(v[k])
+   k=k+1
+print('THE NUMBER OF VOWELS IN THE GIVEN STRING: ',P,'IS',len(P)-len(i))
+print('THE NUMBER OF CONSONANTS IN THE GIVEN STRING: ',P,'IS',len(i))
+						</pre></p>
+					</div>
+					<a class="down bottom" href="vowel_count.txt" download  target="_blank" > &laquo Download  &raquo</a>
+				</div>
+			</div>
+		</div>
+
+
+
+
+<br><br><br><br>
+		
+		<div class= "new">
+			<div id="template">
+				<div class="template_box">
+				<h3>PALINDROME</h3>
+<pre>
+What this program does is whatever string you have entered it will check whether
+it is a palindrome or not.
+A palindrome is one when you reverse a string it should be the same as normal string
+otherwise it is not a palindrome.
+</pre>				
+					<div class="template_inside_box">
+						<p><pre>
+#palindrome using slicing
+
+a=input('ENTER THE STRING')
+b=a[::-1]
+if a==b:
+    print(a,' IS PALINDROME')
+else:
+    print(a,' IS NOT PALINDROME')
+#palindrome using while loop
+a=input('ENTER THE STRING')
+b=0
+c=-1
+k=len(a)
+count=1
+w=(k+1)/2
+while(count<=w):
+    b=b+1
+    c=c-1
+    count=count+1
+    if (a[b]!=a[c]):
+        print(a,' IS NOT PALINDROME')
+        break
+if (a[b]==a[c]):
+        print(a,' IS PALINDROME')
+						</pre></p>
+					</div>
+					<a class="down bottom" href="palindrome.txt" download  target="_blank" > &laquo Download  &raquo</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="container" style= "margin-left:80px; ">
+			<p><br/>
+			<a class="up n_bottom" href="projects.html" >  &laquo Prev-Page  </a></p>
+		</div>
+
+		
+		<section id="main">
+			<div class="container">
+				<article id="main-col">
+					<a name="ser"></a>
+					<h1 class="page-title">Services</h1>
+					<ul id="services">
+						<li>
+							<h3>WEBSITE DESIGNING</h3>
+							<p>Website can really boost your BUSINESS, It connects your
+							business to the outter world, thus helping you reach 
+							the remotest of places and more customers
+							</p>
+							<p>We design Websites for promtoing BUSINESS, Educational Institutionals and many more</p>
+							
+						</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+		
+		<section id="main">
+			<div class="container">
+				<article id="main-cols">
+					<a name="about"></a><h1 class="page-title">About Us</h1>
+					<p class="dark">We from python community bring a collection of projects,Notes,Snippets etc..<br>						
+						Beginners have lot of things to look in this website,they can start learning right
+						from the scratch, Python is one of the easiest and best language
+						to learn.</br>
+						One can also look up into projects, feel free to download,  
+						If you could come up with different logic/method on any program then please forward
+						us your program if, any </br>
+						</p>
+					<p class="dark">Contact details<br>abhishekmashetty127@gmail.com<br>Banglore,India</p>
+				</article>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="container">
+				<nav>
+					<ul>
+						<li class="current"> <a href="index.html"> <img src="tt.png"  style="width:25px;height:25px;"> </a></li>			
+						<li><a href="tutorial.html"><img src="fb.png"  style="width:33px;height:25px;"></a></li>
+						<li><a href="projects.html"><img src="insta.png"  style="width:25px;height:25px;"></a></li>
+					</ul>
+				</nav>
+				<div id="f_middle">
+					<p>Abhishek Mashetty  &copy; 2017</p>
+				</div>
+			</div>	
+		</footer>
+		<!-- Paste this code after body tag -->
+		<div class="se-pre-con"></div>
+		<!-- Ends -->
+		</body>
+		</html>

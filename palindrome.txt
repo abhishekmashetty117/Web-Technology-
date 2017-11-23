@@ -1,0 +1,25 @@
+#palindrome using slicing
+
+a=input('ENTER THE STRING')
+b=a[::-1]
+if a==b:
+    print(a,' IS PALINDROME')
+else:
+    print(a,' IS NOT PALINDROME')
+#palindrome using while loop
+a=input('ENTER THE STRING')
+b=0
+c=-1
+k=len(a)
+count=1
+w=(k+1)/2
+while(count<=w):
+    b=b+1
+    c=c-1
+    count=count+1
+    if (a[b]!=a[c]):
+        print(a,' IS NOT PALINDROME')
+        break
+if (a[b]==a[c]):
+        print(a,' IS PALINDROME')
+   

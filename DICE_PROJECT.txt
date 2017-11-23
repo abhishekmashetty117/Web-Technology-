@@ -1,0 +1,91 @@
+import random
+key=input("ENTER ANY KEY TO ROLL A DIE OR PRESS 'ENTER' TO QUIT")
+def first():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         for i in range(3):
+               print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(9,' '),column.rjust(10,' '))
+         for i in range(3):
+               print(column,space.rjust(18,' '),column)
+         print(top)
+def secondth():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),column.rjust(18,' '))
+         for i in range(5):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(18,' '),column.rjust(1,' '))            
+         print(top)
+def thirdth():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),column.rjust(18,' '))
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(9,' '),column.rjust(10,' '))    
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(18,' '),column.rjust(1,' '))            
+         print(top)
+def four():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         for i in range(5):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         print(top)
+def five():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(9,' '),column.rjust(10,' '))    
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)    
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         print(top)
+def sixth():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         for i in range(2):
+            print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+            print(column,space.rjust(18,' '),column)
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         print(top)
+while key!='':
+    s=random.randint(1,6)
+    if s==1:
+         first()         
+    if s==2:         
+         secondth()
+    if s==3:
+         thirdth()
+    if s==4:
+         four()
+    if s==5:
+         five()
+    if s==6:
+         sixth()
+    key=input("IF YOU WANT TO PLAY AGAIN PRESS ANY KEY OR PRESS ENTER TO QUIT")  

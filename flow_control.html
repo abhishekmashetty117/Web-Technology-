@@ -1,0 +1,198 @@
+<!Doctype html>
+
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Affordable and profession web desginer">
+		<meta name="Keywords" content="web design,affordable web design">
+		<meta name="author" content="Abhishek Mashetty">
+		<title>Python Programming | About</title>
+		<link rel="stylesheet" type="text/css" href="how.css"/>
+		<link rel="icon" href="AM.png">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+		<script>
+			//paste this code under head tag or in a seperate js file.
+			// Wait for window load
+			$(window).load(function() {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+			});
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><span class="highlight">Python Programming</span> </h1>
+				</div>
+				<nav>
+					<ul>
+					<li ><a href="index.html">Home</a></li>
+					<li class="current"><a href="tutorial.html">Tutorials</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="projects.html#about">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+<br><br><br>
+<div class="container"><hr width="10000">
+<br>
+<font size=6 face="Blackletter" color="#4fbcea">
+Flow Control</font><br><br>
+<hr width="10000">
+</div><br><br>
+<a name="ifelse"><div class ="container"><font size=13 face="Ariel">if else statement</font></a>
+<pre>Conditions tests if something is True or False, and it uses Boolean values
+to check that.
+You see that conditions are either True or False (with no quotes!).</pre>
+<br><br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>{If ...else}
+	if condition:
+		statements
+
+	else:
+		statements</pre>
+<br><br>
+<font size=13 face="Ariel">nested if statement</font>
+<pre>You place an if statement inside another statement.This process is called
+nesting and enables you to make complex decisions based on different
+inputs.</pre>
+<br><br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>if condition:
+	if condition:
+		statements
+	else:
+		statements
+else:
+      statements</pre>
+<br><br>
+<font size=13 face="Ariel">if..elif..else statements</font>
+<pre>The elif statement is simply a contradiction of the else if statement.</pre>
+<br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>If ...else
+
+    if condition:
+        statements
+
+    elif condition:
+ statements
+
+    else:
+ statements</pre>
+<br><br>
+<a name="for_loop"><font size=13 face="Ariel">for loop</font></a>
+<pre>for loops are traditionally used when you have a block of code which you
+want to repeat a fixed number of times.The Python for statement iterates over
+the members of a sequence in order, executing the block each time</pre>
+<br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>for iterating_var in sequence:
+   statements(s)</pre>
+ <br><br>
+<a name="while_loop"><font size=13 face="Ariel">while loop</font></a>
+<br>
+<pre>The while loop in Python is used to iterate over a block of code as long as
+the test expression (condition) is true.We generally use this loop when we don't
+know beforehand, the number of times to iterate.</pre>
+<br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>while (expression) :
+    statement_1
+    statement_2
+    ......
+else :
+    statement_3
+    statement_4
+    ......</pre>
+<br>
+<a name="break"><font size=13 face="Ariel">break statement</font></a>
+<pre>break may only occur syntactically nested in a for or while loop, but not
+nested in a function or class definition within that loop.It terminates the
+nearest enclosing loop, skipping the optional else clause if the loop has one.
+
+If a for loop is terminated by break, the loop control target keeps its current
+value. When break passes control out of a try statement with a finally clause,
+that finally clause is executed before really leaving the loop.</pre>
+<br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>break_stmt:     "break"</pre>
+<br><br>
+<font size=13 face="Ariel">continue statement</font>
+<pre>continue may only occur syntactically nested in a for or while loop, but
+not nested in a function or class definition or try statement within that loop.
+It continues with the next cycle of the nearest enclosing loop.</pre>
+<br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>continue_stmt:  "continue"</pre>
+<br><br>
+<a name="switch"><font size=13 face="Ariel">switch case expression</font></a>
+<pre>A switch-case statement lets you control the flow of the program based on
+the value of a variable or expression. In particular, if the variable or
+expression that you’re testing has a number of different of possible values,
+you could execute a block of code for each separate value</pre>
+<br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>
+switch EXPR:
+    case EXPR:
+        statement
+        break
+    case EXPR:
+        statement
+        break
+    ...
+    case default:
+       statement
+       break
+</pre>
+<a name="pass"><font size=13 face="Ariel">pass statements</font></a>
+<pre>pass is a null operation -- when it is executed, nothing happens.
+It is useful as a placeholder when a statement is required syntactically,but no
+code needs to be executed, for example:</pre>
+<br>
+<font size=6 face="Ariel">Syntax</font>
+<pre>pass_stmt:      "pass"
+def f(arg): pass    # a function that does nothing (yet)
+class C: pass       # a class with no methods (yet)</pre>
+<br><br>
+<a name="infinite"><font size=13 face="Ariel">The infinite loop</font></a>
+<pre>A loop becomes infinite loop if a condition never becomes FALSE. You must
+use caution when using while loops because of the possibility that this condition
+never resolves to a FALSE value. This results in a loop that never ends. Such a
+loop is called an infinite loop.
+An infinite loop might be useful in client/server programming where the server
+needs to run continuously so that client programs can communicate with it as and
+when required.</pre>
+<br>
+<font size=6 face="Ariel">Working</font>
+<pre>An example of an infinite loop would explain the concept better.
+int a=1
+while a==1: //this is always true
+	print("helo world")
+</pre>
+</div>
+<footer>
+	<div class="container">
+		<nav>
+			<ul>
+				<li class="current"> <a href="index.html"> <img src="tt.png"  style="width:25px;height:25px;"> </a></li>
+				<li><a href="tutorial.html"><img src="fb.png"  style="width:33px;height:25px;"></a></li>
+				<li><a href="projects.html"><img src="insta.png"  style="width:25px;height:25px;"></a></li>
+			</ul>
+		</nav>
+		<div id="f_middle">
+			<p>Abhishek Mashetty  &copy; 2017</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

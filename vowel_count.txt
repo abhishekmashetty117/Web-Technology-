@@ -1,0 +1,31 @@
+#vowel count using while
+
+P=input('ENTER THE STRING')
+i=P.lower()
+b=list(i)
+v='a','e','i','o','u'
+k=0
+m=0
+n=0
+while(k<5):
+    if v[k] in i :     #or v[k] in P or v[k] in b
+        s=i.count(v[k])
+        m=m+s
+    k=k+1
+    
+print('THE NUMBER OF VOWELS IN THE GIVEN STRING: ',P,'IS',m)
+print('THE NUMBER OF CONSONANTS IN THE GIVEN STRING: ',P,'IS',len(P)-m-n)
+
+
+#vowel count using remove
+P=input('ENTER THE STRING')
+P=P.lower()
+i=list(P)
+v='a','e','i','o','u'
+k=0
+while(k<5):
+   if v[k] in i:
+     i.remove(v[k])
+   k=k+1
+print('THE NUMBER OF VOWELS IN THE GIVEN STRING: ',P,'IS',len(P)-len(i))
+print('THE NUMBER OF CONSONANTS IN THE GIVEN STRING: ',P,'IS',len(i))

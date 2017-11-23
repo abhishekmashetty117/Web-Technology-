@@ -1,0 +1,367 @@
+		<section id="text-editor">
+			<div class="container">
+				<a name="top_1"></a>
+				<h2>Python Projects</h2><br/>
+				<h3>DICE</h3>
+				<a href="DICE_PROJECT.txt"  download title="Click to Download">Click to Download</a>
+				<article id="textEditor_project" contenteditable="true">
+					<script>
+        var options = ['ul','div'];
+        var subOptions = {
+            'ul':['li'],
+            'div':['div','span', 'p']
+        };
+					</script>
+					<p><pre>
+import random
+key=input("ENTER ANY KEY TO ROLL A DIE OR PRESS 'ENTER' TO QUIT")
+def first():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         for i in range(3):
+               print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(9,' '),column.rjust(10,' '))
+         for i in range(3):
+               print(column,space.rjust(18,' '),column)
+         print(top)
+def secondth():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),column.rjust(18,' '))
+         for i in range(5):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(18,' '),column.rjust(1,' '))            
+         print(top)
+def thirdth():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),column.rjust(18,' '))
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(9,' '),column.rjust(10,' '))    
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(18,' '),column.rjust(1,' '))            
+         print(top)
+def four():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         for i in range(5):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         print(top)
+def five():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(9,' '),column.rjust(10,' '))    
+         for i in range(2):
+            print(column,space.rjust(18,' '),column)    
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         print(top)
+def sixth():
+         space=' '
+         column='|'
+         number='0'
+         top=space.ljust(21,'-')
+         print(top)
+         for i in range(2):
+            print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+            print(column,space.rjust(18,' '),column)
+            print(column,space.rjust(18,' '),column)
+         print(column,number.rjust(1,' '),number.rjust(16,' '),column.rjust(1,' '))
+         print(top)
+while key!='':
+    s=random.randint(1,6)
+    if s==1:
+         first()         
+    if s==2:         
+         secondth()
+    if s==3:
+         thirdth()
+    if s==4:
+         four()
+    if s==5:
+         five()
+    if s==6:
+         sixth()
+    key=input("IF YOU WANT TO PLAY AGAIN PRESS ANY KEY OR PRESS ENTER TO QUIT")  
+					
+					</pre></p>	
+				</article>
+				<br/><br/>
+				<h3>TIMER-STOPWATCH</h3>
+				<a href="TIMER-STOPWATCH.txt"  download title="Click to Download">Click to Download</a>
+				<article id="textEditor_project" contenteditable="true">
+					<script>
+        var options = ['ul','div'];
+        var subOptions = {
+            'ul':['li'],
+            'div':['div','span', 'p']
+        };
+					</script>
+					<p><pre>
+import os
+import time
+space=' '
+column='|'
+def cls():
+        os.system('cls')
+key1=input("ENTER 'S' FOR STOPWATCH OR 'T' FOR TIMER OR PRESS 'ENTER' TO QUIT: ")
+cls()
+while key1 not in ['S','T','t','s','']:
+    key1=input("ENTER A VALID INPUT,S FOR STOPWATCH OR T FOR TIMER:")
+    cls()
+if key1 in ['s','S']:
+    def clock():
+        hour =0
+        minute=0
+        second=0
+        day=0
+        while True:
+  # FOR SPACING OF TOP PORTION
+            for i in range(24):
+                print(space.rjust(167,' '))
+                
+  # FOR PRINTING OF MATTER(CLOCK),PRINTING IT IN CENTER OF THE SCREEN              
+            print(space.rjust(80,' '),"THE TIME IS:", day ,':',  
+			hour , ":",  minute ,":", second)
+            print(space.rjust(80,' '),' '.rjust(10,' '),"D   H   M   S")
+            print(space.rjust(80,' '),"D=Day,H =Hour,M=Minute,S=Second")
+            
+  # FOR SPACING OF BOTTOM PORTION
+            for i in range(24):
+                print(space.rjust(167,' '))
+
+            time.sleep(0.93)            #TO MAKE PRINTING DELAY BY 1 SEC
+			#,WHICH WOULD MAKE IT MORE OF A PRACTICAL TIMER
+            cls()                       #CALLING OF FUNCTION WHICH CAUSES 
+			#TO REPLACE IT IN ITSELF
+            second +=1                  #FOR REDUCING SECOND BY 1 
+
+  #CONVERSION FACTORS OF SECOND,MINUTE,HOUR AND DAY                    
+            if second == 60:
+                  minute += 1
+                  second = 0
+            if minute == 60:
+                  hour += 1
+                  minute = 0
+            if hour == 24:
+                  day += 1
+                  hour =0
+                  
+    clock()
+                  
+if key1 in ['t','T']:
+    def clock():    
+        space = ' '
+        column = '|'          
+        
+  # INITIALISING THE PARAMETERS OR INPUT
+    while True:
+       try:     
+        day=    int(input('ENTER DAY       :'))
+        cls()
+        break
+       except:
+               print('ENTER VALID INPUT')
+               time.sleep(2)
+               cls()
+    while True:
+       try:
+        hour =  int(input('ENTER HOUR      :'))
+        cls()
+        break
+       except:
+               print('ENTER VALID INPUT')
+               time.sleep(2)
+               cls()
+    while True:
+       try:
+        minute= int(input('ENTER MINUTE    :'))
+        cls()
+        break
+       except:
+               print('ENTER VALID INPUT')
+               time.sleep(2)
+               cls()
+    while True:
+       try:
+        second= int(input('ENTER SECOND    :'))
+        cls()
+        break
+       except:
+               print('ENTER VALID INPUT')
+               time.sleep(2)
+               cls()
+ 
+          
+    while True:
+  # FOR SPACING OF TOP PORTION
+            for i in range(24):
+                print(space.rjust(167,' '))
+                
+  # FOR ENDING OF TIMER,INCLUDING BREAK AND DISPLAY OF END
+            if day==0 and second==0 and minute==0 and hour==0:
+                 for i in range(1):
+                      print(space.rjust(167,' '))    #space=' ',column='|'
+                 print(space.rjust(80,' '),space+space.rjust(6,'-'),
+				 '',space.rjust(3,'-'),'  ',space+space,space.rjust(6,'-'))
+                 time.sleep(0.4)
+                 for i in range(3):
+                      print(space.rjust(80,' '),column,'     ',column,
+					  '|',' ' ,column,' ',column,'   ',column)
+                      time.sleep(0.4)
+                 print(space.rjust(80,' '),space+space.rjust(6,'-'),
+				column,column,space,column,space,column,column.rjust(5,' '))
+                 time.sleep(0.4)
+                 for i in range(3):
+                      print(space.rjust(80,' '),column,'     ',
+					  column,'|',' ' ,column,' ',column,'   ',column)
+                      time.sleep(0.4)
+                 print(space.rjust(80,' '),space+space.rjust(6,'-'),
+				 space,space+space.rjust(4,'-'),'  ',space.rjust(6,'-'))
+                 time.sleep(10)
+                 break
+  # FOR PRINTING OF MATTER(CLOCK),PRINTING IT IN CENTER OF THE SCREEN                        
+            print(space.rjust(80,' '),"THE TIME IS:", day ,':',  hour , ":",
+			minute ,":", second)
+            print(space.rjust(80,' '),' '.rjust(10,' '),"D   H   M   S")
+            print(space.rjust(80,' '),"D=Day,H =Hour,M=Minute,S=Second")
+
+  # FOR SPACING OF BOTTOM PORTION
+            for i in range(24):
+                print(space.rjust(167,' '))
+            
+            time.sleep(1)   #TO MAKE PRINTING DELAY BY 1 SEC,WHICH WOULD 
+			#MAKE IT MORE OF A PRACTICAL TIMER
+            cls()           #CALLING OF FUNCTION WHICH CAUSES TO REPLACE
+#			IT IN ITSELF
+            second -=1      #FOR REDUCING SECOND BY 1 
+
+  #CONVERSION FACTORS OF SECOND,MINUTE,HOUR AND DAY
+            if second == -1:
+                  minute -= 1
+                  second = 59
+
+            if minute == -1:
+                  hour -= 1
+                  minute = 59
+
+            if hour == -1:
+                  day -= 1
+                  hour = 0
+    clock()
+if key1 =='':
+    print('OKAY,THANK YOU')
+    time.sleep(10)					
+					</pre></p>
+				</article>
+				<br/><br/>
+				<h3>VOWELS & CONSONANTS</h3>
+				<a href="vowel_count.txt"  download title="Click to Download">Click to Download</a>
+				<article id="textEditor_project" contenteditable="true">
+					<script>
+        var options = ['ul','div'];
+        var subOptions = {
+            'ul':['li'],
+            'div':['div','span', 'p']
+        };
+					</script>
+					<p><pre>
+#vowel count using while
+
+P=input('ENTER THE STRING')
+i=P.lower()
+b=list(i)
+v='a','e','i','o','u'
+k=0
+m=0
+n=0
+while(k<5):
+    if v[k] in i :     #or v[k] in P or v[k] in b
+        s=i.count(v[k])
+        m=m+s
+    k=k+1
+    
+print('THE NUMBER OF VOWELS IN THE GIVEN STRING: ',P,'IS',m)
+print('THE NUMBER OF CONSONANTS IN THE GIVEN STRING: ',P,'IS',len(P)-m-n)
+
+
+#vowel count using remove
+
+P=input('ENTER THE STRING')
+P=P.lower()
+i=list(P)
+v='a','e','i','o','u'
+k=0
+while(k<5):
+   if v[k] in i:
+     i.remove(v[k])
+   k=k+1
+print('THE NUMBER OF VOWELS IN THE GIVEN STRING: ',P,'IS',len(P)-len(i))
+print('THE NUMBER OF CONSONANTS IN THE GIVEN STRING: ',P,'IS',len(i))
+					</pre></p>
+				</article>
+				<br/><br/>
+				<h3>PALINDROME</h3>
+				<a href="palindrome.txt"  download title="Click to Download">Click to Download</a>
+				<article id="textEditor_project" contenteditable="true">
+					<script>
+        var options = ['ul','div'];
+        var subOptions = {
+            'ul':['li'],
+            'div':['div','span', 'p']
+        };
+					</script>
+					<p><pre>
+#palindrome using slicing
+
+a=input('ENTER THE STRING')
+b=a[::-1]
+if a==b:
+    print(a,' IS PALINDROME')
+else:
+    print(a,' IS NOT PALINDROME')
+#palindrome using while loop
+a=input('ENTER THE STRING')
+b=0
+c=-1
+k=len(a)
+count=1
+w=(k+1)/2
+while(count<=w):
+    b=b+1
+    c=c-1
+    count=count+1
+    if (a[b]!=a[c]):
+        print(a,' IS NOT PALINDROME')
+        break
+if (a[b]==a[c]):
+        print(a,' IS PALINDROME')
+					</pre></p>
+				</article>
+				<a href="#top_1" title="Go To Top">Top</a>	
+				<br/>
+				<br/>
+			</div>
+		</section>	
+		
